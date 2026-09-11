@@ -1,0 +1,3107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNS Tours & Travels – Explore India & The World | Est. 2004</title>
+<meta name="description" content="RNS Tours & Travels – Bengaluru's trusted travel agency since 2004. Specializing in domestic & international tour packages, heritage tours, pilgrimage tours, and car rental services.">
+<meta name="keywords" content="RNS Tours Travels, Bengaluru travel agency, domestic tour packages, international tours, heritage tours, pilgrimage tours, car rental Bangalore">
+<meta property="og:title" content="RNS Tours & Travels – Est. 2004, Bengaluru">
+<meta property="og:description" content="Creating unforgettable travel experiences since 2004. Domestic, international, heritage & pilgrimage tours from Bengaluru.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #0d2b55;
+    --royal-blue: #1a4a8a;
+    --teal: #00a8a6;
+    --teal-light: #1fd4d2;
+    --gold: #d4a574;
+    --gold-light: #e8c896;
+    --gold-pale: #f5ead4;
+    --white: #ffffff;
+    --off-white: #f8f6f2;
+    --light-gray: #f0eff0;
+    --mid-gray: #8a8fa0;
+    --dark-text: #1a1e2e;
+    --body-text: #3d4252;
+    --shadow-sm: 0 2px 12px rgba(10,22,40,0.08);
+    --shadow-md: 0 8px 32px rgba(10,22,40,0.14);
+    --shadow-lg: 0 20px 60px rgba(10,22,40,0.18);
+    --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--body-text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===================== HEADER ===================== */
+  header {
+    position: fixed; top:0; left:0; right:0; z-index:1000;
+    background: rgba(10,22,40,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,151,58,0.2);
+    transition: var(--transition);
+  }
+  header.scrolled {
+    background: rgba(10,22,40,0.99);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  }
+  .header-inner {
+    max-width: 1280px; margin:0 auto;
+    display: flex; align-items:center; justify-content:space-between;
+    padding: 0 24px; height: 72px;
+  }
+  .logo-wrap { display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .logo-icon {
+    width:46px; height:46px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 10px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; color:var(--navy);
+  }
+  .logo-img {
+    width:56px; height:56px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: var(--off-white);
+    padding: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+  .logo-text { line-height:1.1; }
+  .logo-text .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; font-size:18px; color:var(--white);
+    letter-spacing:0.3px;
+  }
+  .logo-text .tagline {
+    font-size:10px; color:var(--gold); letter-spacing:1.5px;
+    text-transform:uppercase;
+  }
+  nav { display:flex; align-items:center; gap:4px; }
+  nav a {
+    color: rgba(255,255,255,0.85); text-decoration:none;
+    padding: 8px 14px; border-radius:8px; font-size:14px; font-weight:500;
+    transition: var(--transition); letter-spacing:0.2px;
+  }
+  nav a:hover, nav a.active {
+    color: var(--gold); background: rgba(200,151,58,0.1);
+  }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+    color: var(--navy) !important; font-weight:600 !important;
+    padding: 9px 20px !important; margin-left:8px;
+  }
+  .nav-cta:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(200,151,58,0.4); }
+  .hamburger {
+    display:none; flex-direction:column; gap:5px; cursor:pointer;
+    padding:8px; border:none; background:none;
+  }
+  .hamburger span {
+    display:block; width:24px; height:2px;
+    background:var(--white); transition:var(--transition);
+  }
+  .mobile-nav {
+    display:none; position:fixed; top:72px; left:0; right:0; bottom:0;
+    background:rgba(10,22,40,0.98); z-index:999; flex-direction:column;
+    align-items:center; justify-content:center; gap:12px;
+  }
+  .mobile-nav.open { display:flex; }
+  .mobile-nav a {
+    color:var(--white); text-decoration:none; font-size:22px;
+    font-family:'Playfair Display',serif; font-weight:600;
+    padding:12px 40px; border-bottom:1px solid rgba(200,151,58,0.15);
+    width:100%; text-align:center; transition:var(--transition);
+  }
+  .mobile-nav a:hover { color:var(--gold); }
+
+  /* ===================== PAGES ===================== */
+  .page { display:none; }
+  .page.active { display:block; }
+  .pt-header { padding-top:72px; }
+
+  /* ===================== HERO ===================== */
+  .hero {
+    position:relative; height:100vh; min-height:620px;
+    display:flex; align-items:center; overflow:hidden;
+  }
+  .hero-slides { position:absolute; inset:0; }
+  .hero-slide {
+    position:absolute; inset:0; opacity:0;
+    background-size:cover; background-position:center;
+    transition:opacity 1.2s ease;
+  }
+  .hero-slide.active { opacity:1; }
+  .hero-slide:nth-child(1) { background-image: linear-gradient(135deg, rgba(10,22,40,0.7), rgba(14,124,123,0.4)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1600&q=80'); }
+  .hero-slide:nth-child(2) { background-image: linear-gradient(135deg, rgba(10,22,40,0.65), rgba(26,74,138,0.4)), url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1600&q=80'); }
+  .hero-slide:nth-child(3) { background-image: linear-gradient(135deg, rgba(10,22,40,0.7), rgba(200,151,58,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80'); }
+  .hero-overlay {
+    position:absolute; inset:0;
+    background: linear-gradient(to right, rgba(10,22,40,0.6) 0%, rgba(10,22,40,0.1) 70%);
+  }
+  .hero-content {
+    position:relative; z-index:2; max-width:1280px; margin:0 auto;
+    padding:0 24px; width:100%;
+  }
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(200,151,58,0.15); border:1px solid rgba(200,151,58,0.4);
+    backdrop-filter:blur(8px); color:var(--gold-light);
+    padding:8px 18px; border-radius:50px; font-size:12px;
+    letter-spacing:1.5px; text-transform:uppercase; font-weight:600; margin-bottom:28px;
+  }
+  .hero-title {
+    font-family:'Playfair Display', serif; font-weight:900;
+    color:var(--white); font-size:clamp(36px,5.5vw,72px);
+    line-height:1.1; max-width:720px; margin-bottom:22px;
+  }
+  .hero-title span { color:var(--gold-light); font-style:italic; }
+  .hero-subtitle {
+    color:rgba(255,255,255,0.82); font-size:18px; max-width:500px;
+    line-height:1.7; margin-bottom:40px; font-weight:300;
+  }
+  .hero-btns { display:flex; gap:16px; flex-wrap:wrap; }
+  .btn-primary {
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    color:var(--navy); font-weight:700; padding:15px 34px;
+    border-radius:50px; border:none; cursor:pointer; font-size:15px;
+    letter-spacing:0.3px; transition:var(--transition); text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif;
+  }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(200,151,58,0.45); }
+  .btn-outline {
+    background:transparent; color:var(--white); font-weight:600;
+    padding:14px 32px; border-radius:50px; border:2px solid rgba(255,255,255,0.5);
+    cursor:pointer; font-size:15px; transition:var(--transition);
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    font-family:'DM Sans',sans-serif;
+  }
+  .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+  .hero-indicators {
+    position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+    display:flex; gap:10px; z-index:2;
+  }
+  .hero-dot {
+    width:8px; height:8px; border-radius:50%;
+    background:rgba(255,255,255,0.4); cursor:pointer; transition:var(--transition);
+  }
+  .hero-dot.active { background:var(--gold); width:28px; border-radius:4px; }
+  .hero-scroll {
+    position:absolute; bottom:36px; right:40px; z-index:2;
+    color:rgba(255,255,255,0.6); text-align:center; font-size:11px;
+    letter-spacing:2px; text-transform:uppercase;
+  }
+  .hero-scroll::before {
+    content:''; display:block; width:1px; height:50px;
+    background:linear-gradient(to bottom,transparent,rgba(200,151,58,0.6));
+    margin:0 auto 10px;
+  }
+
+  /* ===================== SECTIONS ===================== */
+  section { padding:90px 24px; }
+  .container { max-width:1280px; margin:0 auto; }
+  .section-header { text-align:center; margin-bottom:60px; }
+  .section-label {
+    display:inline-block; color:var(--teal); font-size:11px;
+    letter-spacing:2.5px; text-transform:uppercase; font-weight:700;
+    margin-bottom:14px; position:relative;
+  }
+  .section-label::before, .section-label::after {
+    content:''; position:absolute; top:50%;
+    width:28px; height:1px; background:var(--teal);
+  }
+  .section-label::before { right:calc(100% + 10px); }
+  .section-label::after { left:calc(100% + 10px); }
+  .section-title {
+    font-family:'Playfair Display',serif; font-weight:700;
+    font-size:clamp(28px,3.5vw,46px); color:var(--dark-text);
+    line-height:1.2; margin-bottom:18px;
+  }
+  .section-title span { color:var(--teal); font-style:italic; }
+  .section-desc { color:var(--mid-gray); font-size:17px; line-height:1.7; max-width:580px; margin:0 auto; }
+
+  /* ===================== WELCOME ===================== */
+  .welcome-section { background:var(--off-white); }
+  .welcome-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+  .welcome-img-wrap { position:relative; }
+  .welcome-img {
+    width:100%; aspect-ratio:4/5; object-fit:cover;
+    border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);
+  }
+  .welcome-badge {
+    position:absolute; bottom:30px; left:-28px;
+    background:linear-gradient(135deg,var(--navy),var(--deep-blue));
+    color:white; padding:22px 24px; border-radius:var(--radius);
+    box-shadow:var(--shadow-md); text-align:center; min-width:130px;
+  }
+  .welcome-badge .num {
+    font-family:'Playfair Display',serif; font-size:42px; font-weight:900; color:var(--gold);
+    display:block; line-height:1;
+  }
+  .welcome-badge .lbl { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.7); }
+  .welcome-text h2 { font-family:'Playfair Display',serif; font-size:clamp(28px,3vw,42px); font-weight:700; color:var(--dark-text); line-height:1.25; margin-bottom:22px; }
+  .welcome-text h2 em { color:var(--teal); font-style:italic; }
+  .welcome-text p { color:var(--body-text); line-height:1.8; margin-bottom:16px; font-size:16px; }
+  .welcome-stats { display:flex; gap:36px; margin-top:36px; padding-top:36px; border-top:1px solid rgba(0,0,0,0.08); }
+  .stat-item { text-align:center; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:32px; font-weight:700; color:var(--navy); display:block; }
+  .stat-lbl { font-size:12px; color:var(--mid-gray); letter-spacing:0.5px; }
+
+  /* ===================== WHY CHOOSE ===================== */
+  .why-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; }
+  .why-card {
+    background:var(--white); border-radius:var(--radius); padding:28px 22px;
+    text-align:center; border:1px solid rgba(0,0,0,0.06);
+    transition:var(--transition); cursor:default;
+    position:relative; overflow:hidden;
+  }
+  .why-card::before {
+    content:''; position:absolute; bottom:0; left:0; right:0;
+    height:3px; background:linear-gradient(90deg,var(--teal),var(--gold));
+    transform:scaleX(0); transition:var(--transition);
+  }
+  .why-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+  .why-card:hover::before { transform:scaleX(1); }
+  .why-icon {
+    width:54px; height:54px; border-radius:12px; margin:0 auto 16px;
+    background:linear-gradient(135deg,rgba(14,124,123,0.12),rgba(200,151,58,0.1));
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; color:var(--teal);
+  }
+  .why-card h4 { font-size:14px; font-weight:600; color:var(--dark-text); line-height:1.35; }
+
+  /* ===================== SERVICES ===================== */
+  .services-section { background:var(--navy); }
+  .services-section .section-title { color:var(--white); }
+  .services-section .section-desc { color:rgba(255,255,255,0.6); }
+  .services-section .section-label { color:var(--gold); }
+  .services-section .section-label::before,
+  .services-section .section-label::after { background:var(--gold); }
+  .services-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; }
+  .service-card {
+    position:relative; border-radius:var(--radius-lg); overflow:hidden;
+    aspect-ratio:4/3; cursor:pointer; group:true;
+  }
+  .service-card img {
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.6s ease;
+  }
+  .service-card:hover img { transform:scale(1.07); }
+  .service-overlay {
+    position:absolute; inset:0;
+    background:linear-gradient(to top,rgba(10,22,40,0.88) 0%,rgba(10,22,40,0.1) 60%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:24px;
+  }
+  .service-tag {
+    position:absolute; top:16px; left:16px;
+    background:rgba(200,151,58,0.9); color:var(--navy);
+    padding:4px 12px; border-radius:50px; font-size:10px;
+    font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  }
+  .service-card h3 { color:white; font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:6px; }
+  .service-card p { color:rgba(255,255,255,0.7); font-size:13px; line-height:1.5; }
+  .service-arrow {
+    position:absolute; bottom:24px; right:24px;
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(200,151,58,0.8); display:flex; align-items:center; justify-content:center;
+    color:var(--navy); font-size:14px; transition:var(--transition);
+    transform:translateX(50px); opacity:0;
+  }
+  .service-card:hover .service-arrow { transform:translateX(0); opacity:1; }
+
+  /* ===================== SERVICE MODAL ===================== */
+  .service-modal {
+    display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;
+    opacity:0; transition:opacity 0.3s ease;
+  }
+  .service-modal.active {
+    display:flex; opacity:1;
+  }
+  .service-modal-content {
+    background:var(--white); border-radius:var(--radius-lg);
+    max-width:600px; width:90%; max-height:80vh; overflow-y:auto;
+    padding:40px; position:relative; animation:slideUp 0.4s ease;
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  }
+  @keyframes slideUp {
+    from { transform:translateY(50px); opacity:0; }
+    to { transform:translateY(0); opacity:1; }
+  }
+  .service-modal-close {
+    position:absolute; top:20px; right:20px;
+    width:32px; height:32px; border:none; background:var(--light-gray);
+    border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    font-size:18px; color:var(--dark-text); transition:var(--transition);
+  }
+  .service-modal-close:hover { background:var(--gold); color:var(--navy); }
+  .service-modal-image {
+    width:100%; height:300px; object-fit:cover; border-radius:var(--radius);
+    margin-bottom:24px;
+  }
+  .service-modal h2 {
+    font-family:'Playfair Display',serif; font-size:28px; font-weight:700;
+    color:var(--dark-text); margin-bottom:12px;
+  }
+  .service-modal-tag {
+    display:inline-block; background:var(--teal-light); color:white;
+    padding:6px 14px; border-radius:50px; font-size:12px; font-weight:600;
+    margin-bottom:16px; letter-spacing:0.5px;
+  }
+  .service-modal p {
+    color:var(--body-text); line-height:1.8; margin-bottom:16px; font-size:15px;
+  }
+  .service-modal ul {
+    list-style:none; margin:20px 0;
+  }
+  .service-modal ul li {
+    color:var(--body-text); line-height:1.8; padding-left:24px; position:relative;
+    margin-bottom:12px;
+  }
+  .service-modal ul li:before {
+    content:'✓'; position:absolute; left:0; color:var(--teal-light); font-weight:700;
+  }
+  .service-modal-buttons {
+    display:flex; gap:12px; margin-top:28px;
+  }
+  .service-modal-buttons .btn-primary {
+    flex:1;
+  }
+
+  /* ===================== TESTIMONIALS ===================== */
+  .testimonials-section { background:var(--off-white); }
+  .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:28px; }
+  .testi-card {
+    background:var(--white); border-radius:var(--radius-lg); padding:36px 30px;
+    box-shadow:var(--shadow-sm); position:relative; overflow:hidden;
+    border:1px solid rgba(0,0,0,0.04); transition:var(--transition);
+  }
+  .testi-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+  .testi-card::before {
+    content:'\201C'; font-family:'Playfair Display',serif; font-size:80px;
+    color:rgba(14,124,123,0.08); position:absolute; top:-10px; left:20px;
+    line-height:1;
+  }
+  .testi-stars { color:var(--gold); margin-bottom:16px; font-size:14px; }
+  .testi-text { color:var(--body-text); line-height:1.75; font-size:15px; margin-bottom:24px; font-style:italic; }
+  .testi-author { display:flex; align-items:center; gap:14px; }
+  .testi-avatar {
+    width:46px; height:46px; border-radius:50%;
+    background:linear-gradient(135deg,var(--teal),var(--royal-blue));
+    display:flex; align-items:center; justify-content:center;
+    color:white; font-family:'Playfair Display',serif; font-size:18px; font-weight:700;
+    flex-shrink:0;
+  }
+  .testi-name { font-weight:700; font-size:14px; color:var(--dark-text); }
+  .testi-location { font-size:12px; color:var(--mid-gray); }
+
+  /* ===================== CTA BANNER ===================== */
+  .cta-section {
+    background:linear-gradient(135deg,var(--deep-blue) 0%,var(--teal) 100%);
+    position:relative; overflow:hidden; text-align:center;
+  }
+  .cta-section::before {
+    content:''; position:absolute; inset:0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(200,151,58,0.15) 0%, transparent 60%),
+                      radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
+  }
+  .cta-section .container { position:relative; z-index:1; }
+  .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(28px,4vw,52px); color:var(--white); font-weight:700; margin-bottom:16px; }
+  .cta-section p { color:rgba(255,255,255,0.75); font-size:18px; margin-bottom:40px; max-width:560px; margin-left:auto; margin-right:auto; }
+
+  /* ===================== ABOUT PAGE ===================== */
+  .about-hero {
+    background:linear-gradient(135deg,var(--navy) 0%,var(--deep-blue) 50%,rgba(14,124,123,0.8) 100%);
+    padding:130px 24px 80px;
+    text-align:center; position:relative; overflow:hidden;
+  }
+  .about-hero::before {
+    content:''; position:absolute; inset:0;
+    background-image: radial-gradient(circle at 30% 70%, rgba(200,151,58,0.1) 0%, transparent 50%);
+  }
+  .page-hero-label { color:var(--gold); font-size:11px; letter-spacing:3px; text-transform:uppercase; font-weight:700; margin-bottom:16px; }
+  .page-hero-title { font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(32px,5vw,60px); color:white; line-height:1.15; }
+  .page-hero-title span { color:var(--gold-light); font-style:italic; }
+  .page-hero-sub { color:rgba(255,255,255,0.7); font-size:17px; margin-top:16px; max-width:500px; margin-left:auto; margin-right:auto; }
+
+  .mission-vision-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:20px; }
+  .mv-card {
+    padding:44px 40px; border-radius:var(--radius-lg);
+    position:relative; overflow:hidden;
+  }
+  .mv-card.mission { background:var(--navy); }
+  .mv-card.vision { background:linear-gradient(135deg,var(--teal),var(--teal-light)); }
+  .mv-icon { font-size:36px; margin-bottom:20px; }
+  .mv-card h3 { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:white; margin-bottom:14px; }
+  .mv-card p { color:rgba(255,255,255,0.78); line-height:1.75; font-size:16px; }
+
+  .trust-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:24px; }
+  .trust-card {
+    background:var(--white); border-radius:var(--radius); padding:32px 26px;
+    border:1px solid rgba(0,0,0,0.06); transition:var(--transition);
+    display:flex; align-items:flex-start; gap:18px;
+  }
+  .trust-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:rgba(14,124,123,0.2); }
+  .trust-icon {
+    width:50px; height:50px; border-radius:10px; flex-shrink:0;
+    background:linear-gradient(135deg,var(--teal),var(--teal-light));
+    display:flex; align-items:center; justify-content:center; color:white; font-size:20px;
+  }
+  .trust-content h4 { font-weight:700; font-size:15px; color:var(--dark-text); margin-bottom:6px; }
+  .trust-content p { font-size:13px; color:var(--mid-gray); line-height:1.6; }
+
+  .timeline { position:relative; padding:20px 0; max-width:760px; margin:0 auto; }
+  .timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,var(--teal),var(--gold)); transform:translateX(-50%); }
+  .timeline-item { display:flex; gap:40px; margin-bottom:48px; align-items:center; }
+  .timeline-item:nth-child(even) { flex-direction:row-reverse; }
+  .timeline-content {
+    flex:1; background:var(--white); padding:24px 28px; border-radius:var(--radius);
+    box-shadow:var(--shadow-sm); border:1px solid rgba(0,0,0,0.05); transition:var(--transition);
+  }
+  .timeline-content:hover { transform:scale(1.02); box-shadow:var(--shadow-md); }
+  .timeline-year { color:var(--gold); font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin-bottom:6px; }
+  .timeline-content h4 { font-weight:700; font-size:15px; color:var(--dark-text); margin-bottom:6px; }
+  .timeline-content p { font-size:13px; color:var(--mid-gray); line-height:1.6; }
+  .timeline-dot {
+    width:20px; height:20px; border-radius:50; flex-shrink:0;
+    background:linear-gradient(135deg,var(--teal),var(--gold));
+    border:4px solid var(--white); box-shadow:0 0 0 3px rgba(14,124,123,0.3);
+    border-radius:50%;
+  }
+  .spacer { flex:1; }
+
+  /* ===================== PACKAGES ===================== */
+  .packages-tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:50px; }
+  .tab-btn {
+    padding:10px 22px; border-radius:50px; border:2px solid var(--teal);
+    background:transparent; color:var(--teal); font-size:14px; font-weight:600;
+    cursor:pointer; transition:var(--transition); font-family:'DM Sans',sans-serif;
+  }
+  .tab-btn:hover, .tab-btn.active { background:var(--teal); color:white; }
+  .tab-content { display:none; }
+  .tab-content.active { display:block; }
+  .packages-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px; }
+  .pkg-card {
+    background:var(--white); border-radius:var(--radius-lg); overflow:hidden;
+    box-shadow:var(--shadow-sm); border:1px solid rgba(0,0,0,0.05); transition:var(--transition);
+  }
+  .pkg-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+  .pkg-img { position:relative; aspect-ratio:3/2; overflow:hidden; }
+  .pkg-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+  .pkg-card:hover .pkg-img img { transform:scale(1.06); }
+  .pkg-badge {
+    position:absolute; top:14px; left:14px;
+    background:linear-gradient(135deg,var(--teal),var(--teal-light));
+    color:white; padding:5px 12px; border-radius:50px; font-size:11px; font-weight:600;
+    letter-spacing:0.5px;
+  }
+  .pkg-body { padding:24px; }
+  .pkg-body h3 { font-family:'Playfair Display',serif; font-size:19px; font-weight:700; color:var(--dark-text); margin-bottom:8px; }
+  .pkg-body p { color:var(--mid-gray); font-size:13px; line-height:1.6; margin-bottom:20px; }
+  .pkg-highlights { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; }
+  .pkg-highlights span {
+    background:rgba(14,124,123,0.08); color:var(--teal); padding:4px 10px;
+    border-radius:50px; font-size:11px; font-weight:600;
+  }
+  .btn-enquire {
+    display:block; text-align:center; background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    color:var(--navy); padding:12px; border-radius:50px; font-weight:700; font-size:14px;
+    text-decoration:none; transition:var(--transition); border:none; cursor:pointer; width:100%;
+    font-family:'DM Sans',sans-serif;
+  }
+  .btn-enquire:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(200,151,58,0.4); }
+  .custom-tour-section {
+    background:linear-gradient(135deg,var(--off-white),var(--white)); border-radius:var(--radius-lg);
+    padding:60px; border:1px solid rgba(0,0,0,0.06); margin-top:20px;
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+  }
+  .custom-tour-section h3 { font-family:'Playfair Display',serif; font-size:32px; color:var(--dark-text); margin-bottom:16px; }
+  .custom-tour-section p { color:var(--body-text); line-height:1.8; margin-bottom:20px; }
+  .custom-steps { display:flex; flex-direction:column; gap:16px; }
+  .custom-step { display:flex; align-items:center; gap:16px; }
+  .custom-step-num {
+    width:38px; height:38px; border-radius:50%; flex-shrink:0;
+    background:linear-gradient(135deg,var(--teal),var(--teal-light));
+    color:white; display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:14px;
+  }
+  .custom-step-text h5 { font-weight:700; font-size:14px; color:var(--dark-text); }
+  .custom-step-text p { font-size:13px; color:var(--mid-gray); }
+
+  /* ===================== CAR RENTAL ===================== */
+  .car-services-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px; }
+  .car-service-card {
+    background:var(--white); border-radius:var(--radius); padding:28px 22px;
+    text-align:center; border:1px solid rgba(0,0,0,0.06); transition:var(--transition);
+  }
+  .car-service-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:rgba(14,124,123,0.2); }
+  .car-service-icon { font-size:32px; margin-bottom:12px; color:var(--teal); }
+  .car-service-card h4 { font-weight:700; font-size:14px; color:var(--dark-text); margin-bottom:6px; }
+  .car-service-card p { font-size:12px; color:var(--mid-gray); }
+
+  .vehicles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; }
+  .vehicle-card {
+    background:var(--white); border-radius:var(--radius-lg); overflow:hidden;
+    border:1px solid rgba(0,0,0,0.06); transition:var(--transition);
+  }
+  .vehicle-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+  .vehicle-img { height:180px; overflow:hidden; background:var(--light-gray); }
+  .vehicle-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+  .vehicle-card:hover .vehicle-img img { transform:scale(1.05); }
+  .vehicle-body { padding:20px; }
+  .vehicle-body h4 { font-weight:700; color:var(--dark-text); font-size:16px; margin-bottom:6px; }
+  .vehicle-body p { font-size:13px; color:var(--mid-gray); margin-bottom:14px; }
+  .vehicle-features { display:flex; gap:8px; flex-wrap:wrap; }
+  .vehicle-features span {
+    background:rgba(14,124,123,0.08); color:var(--teal); padding:3px 9px;
+    border-radius:50px; font-size:11px; font-weight:600;
+  }
+
+  .car-form-section { background:var(--off-white); }
+  .car-form-wrap { background:var(--white); border-radius:var(--radius-lg); padding:48px; box-shadow:var(--shadow-md); max-width:700px; margin:0 auto; }
+  .car-form-wrap h3 { font-family:'Playfair Display',serif; font-size:28px; color:var(--dark-text); margin-bottom:8px; }
+  .car-form-wrap p { color:var(--mid-gray); margin-bottom:32px; }
+
+  /* ===================== FORMS ===================== */
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .form-group { display:flex; flex-direction:column; gap:6px; }
+  .form-group.full { grid-column:1/-1; }
+  .form-group label { font-size:13px; font-weight:600; color:var(--dark-text); letter-spacing:0.2px; }
+  .form-group input, .form-group select, .form-group textarea {
+    border:1.5px solid rgba(0,0,0,0.1); border-radius:8px; padding:12px 16px;
+    font-size:15px; font-family:'DM Sans',sans-serif; color:var(--dark-text);
+    transition:var(--transition); background:var(--white); outline:none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color:var(--teal); box-shadow:0 0 0 3px rgba(14,124,123,0.1);
+  }
+  .form-group textarea { resize:vertical; min-height:110px; }
+  .form-submit {
+    background:linear-gradient(135deg,var(--teal),var(--teal-light));
+    color:white; font-weight:700; padding:15px 40px; border-radius:50px;
+    border:none; cursor:pointer; font-size:16px; font-family:'DM Sans',sans-serif;
+    transition:var(--transition); display:inline-flex; align-items:center; gap:10px;
+    margin-top:8px;
+  }
+  .form-submit:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(14,124,123,0.4); }
+  .form-success {
+    display:none; background:rgba(14,124,123,0.08); border:1px solid rgba(14,124,123,0.3);
+    border-radius:var(--radius); padding:16px 20px; margin-top:16px;
+    color:var(--teal); font-weight:600; font-size:14px;
+  }
+
+  /* ===================== CONTACT PAGE ===================== */
+  .contact-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:60px; align-items:start; }
+  .contact-info-card {
+    background:var(--navy); border-radius:var(--radius-lg); padding:44px 40px;
+    color:white;
+  }
+  .contact-info-card h3 { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:28px; color:var(--gold-light); }
+  .contact-item { display:flex; gap:18px; margin-bottom:28px; align-items:flex-start; }
+  .contact-ico {
+    width:44px; height:44px; border-radius:10px; flex-shrink:0;
+    background:rgba(200,151,58,0.15); display:flex; align-items:center; justify-content:center;
+    color:var(--gold); font-size:18px;
+  }
+  .contact-item h5 { font-weight:700; font-size:13px; color:rgba(255,255,255,0.6); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+  .contact-item p, .contact-item a { color:rgba(255,255,255,0.9); font-size:15px; line-height:1.55; text-decoration:none; }
+  .contact-item a:hover { color:var(--gold); }
+  .contact-hours { background:rgba(255,255,255,0.05); border-radius:var(--radius); padding:20px 22px; margin-top:10px; }
+  .contact-hours h5 { color:var(--gold); font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:12px; }
+  .hours-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.06); font-size:14px; }
+  .hours-row:last-child { border-bottom:none; }
+  .hours-row span:first-child { color:rgba(255,255,255,0.7); }
+  .hours-row span:last-child { color:white; font-weight:600; }
+  .contact-form-card {
+    background:var(--white); border-radius:var(--radius-lg); padding:44px 40px;
+    box-shadow:var(--shadow-md); border:1px solid rgba(0,0,0,0.04);
+  }
+  .contact-form-card h3 { font-family:'Playfair Display',serif; font-size:26px; color:var(--dark-text); margin-bottom:8px; }
+  .contact-form-card p { color:var(--mid-gray); margin-bottom:30px; font-size:15px; }
+  .map-section { padding:0; }
+  .map-container {
+    border-radius:var(--radius-lg); overflow:hidden; height:400px;
+    box-shadow:var(--shadow-md);
+  }
+  .map-container iframe { width:100%; height:100%; border:none; }
+
+  /* ===================== FOOTER ===================== */
+  footer {
+    background:var(--navy); color:rgba(255,255,255,0.7);
+    padding:70px 24px 0;
+  }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:50px; max-width:1280px; margin:0 auto; padding-bottom:50px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .footer-brand .logo-text .name { font-size:20px; }
+  .footer-brand p { margin-top:18px; font-size:14px; line-height:1.8; color:rgba(255,255,255,0.6); max-width:280px; }
+  .footer-socials { display:flex; gap:10px; margin-top:24px; }
+  .social-btn {
+    width:38px; height:38px; border-radius:8px;
+    background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center;
+    color:rgba(255,255,255,0.7); text-decoration:none; transition:var(--transition);
+  }
+  .social-btn:hover { background:var(--gold); color:var(--navy); transform:translateY(-2px); }
+  .footer-col h5 { color:white; font-weight:700; font-size:14px; letter-spacing:0.5px; margin-bottom:20px; position:relative; padding-bottom:12px; }
+  .footer-col h5::after { content:''; position:absolute; bottom:0; left:0; width:30px; height:2px; background:var(--gold); }
+  .footer-links { display:flex; flex-direction:column; gap:10px; }
+  .footer-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:14px; transition:var(--transition); }
+  .footer-links a:hover { color:var(--gold); padding-left:4px; }
+  .footer-contact p { font-size:14px; color:rgba(255,255,255,0.6); line-height:1.7; margin-bottom:10px; display:flex; gap:10px; }
+  .footer-contact p i { color:var(--gold); margin-top:3px; flex-shrink:0; }
+  .footer-contact a { color:rgba(255,255,255,0.6); text-decoration:none; transition:var(--transition); }
+  .footer-contact a:hover { color:var(--gold); }
+  .footer-bottom {
+    max-width:1280px; margin:0 auto; padding:22px 0;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    font-size:13px; color:rgba(255,255,255,0.4);
+  }
+  .footer-bottom a { color:rgba(255,255,255,0.4); text-decoration:none; }
+  .footer-bottom a:hover { color:var(--gold); }
+
+  /* ===================== FLOATING BUTTONS ===================== */
+  .float-group { position:fixed; bottom:32px; right:28px; z-index:900; display:flex; flex-direction:column; gap:12px; }
+  .float-btn {
+    width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:22px; cursor:pointer; border:none; transition:var(--transition);
+    box-shadow:0 6px 24px rgba(0,0,0,0.25); text-decoration:none;
+  }
+  .float-wa { background:#25D366; color:white; }
+  .float-call { background:var(--teal); color:white; }
+  .float-top { background:var(--gold); color:var(--navy); }
+  .float-btn:hover { transform:scale(1.1) translateY(-2px); box-shadow:0 10px 32px rgba(0,0,0,0.35); }
+  .float-label {
+    position:absolute; right:calc(100% + 14px); white-space:nowrap;
+    background:rgba(10,22,40,0.85); color:white; padding:6px 12px; border-radius:6px;
+    font-size:12px; opacity:0; pointer-events:none; transition:var(--transition); backdrop-filter:blur(4px);
+  }
+  .float-btn:hover .float-label { opacity:1; }
+  .float-btn { position:relative; }
+
+  /* ===================== ANIMATIONS ===================== */
+  @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+  .hero-content > * { animation:fadeInUp 0.8s ease both; }
+  .hero-badge { animation-delay:0.1s; }
+  .hero-title { animation-delay:0.25s; }
+  .hero-subtitle { animation-delay:0.4s; }
+  .hero-btns { animation-delay:0.55s; }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media(max-width:1024px) {
+    .welcome-grid, .custom-tour-section { grid-template-columns:1fr; gap:40px; }
+    .contact-grid { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:1fr 1fr; }
+    .timeline::before { left:20px; }
+    .timeline-item { flex-direction:row !important; }
+    .spacer { display:none; }
+    .mission-vision-grid { grid-template-columns:1fr; }
+  }
+  @media(max-width:768px) {
+    nav { display:none; }
+    .hamburger { display:flex; }
+    .hero-title { font-size:clamp(28px,8vw,44px); }
+    .hero-subtitle { font-size:15px; }
+    section { padding:60px 20px; }
+    .footer-grid { grid-template-columns:1fr; gap:30px; }
+    .form-grid { grid-template-columns:1fr; }
+    .welcome-badge { left:10px; bottom:10px; }
+    .car-form-wrap, .contact-info-card, .contact-form-card { padding:28px 22px; }
+    .custom-tour-section { padding:30px; }
+  }
+  @media(max-width:480px) {
+    .hero-btns { flex-direction:column; }
+    .btn-primary, .btn-outline { width:100%; justify-content:center; }
+  }
+
+  /* ===================== MODAL ===================== */
+  .modal {
+    display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+    background:rgba(10,22,40,0.8); z-index:2000;
+    align-items:center; justify-content:center;
+  }
+  .modal.active { display:flex; }
+  .modal-content {
+    background:white; border-radius:var(--radius-lg);
+    max-width:700px; max-height:85vh; overflow-y:auto;
+    padding:40px; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3);
+    animation:slideUp 0.4s ease;
+  }
+  @keyframes slideUp {
+    from { transform:translateY(30px); opacity:0; }
+    to { transform:translateY(0); opacity:1; }
+  }
+  .modal-close {
+    position:absolute; top:20px; right:20px;
+    background:none; border:none; font-size:24px; color:var(--mid-gray);
+    cursor:pointer; transition:var(--transition);
+  }
+  .modal-close:hover { color:var(--navy); }
+  .modal-title {
+    font-family:'Playfair Display',serif; font-size:32px; font-weight:700;
+    color:var(--navy); margin-bottom:8px;
+  }
+  .modal-subtitle {
+    font-size:14px; color:var(--gold); font-weight:600; letter-spacing:1px;
+    text-transform:uppercase; margin-bottom:24px;
+  }
+  .modal-duration {
+    display:flex; align-items:center; gap:16px;
+    padding:16px 0; border-bottom:1px solid var(--light-gray);
+    margin-bottom:24px;
+  }
+  .modal-duration span {
+    display:flex; align-items:center; gap:6px; color:var(--body-text);
+    font-size:14px; font-weight:500;
+  }
+  .modal-duration i { color:var(--gold); }
+  .itinerary-section { margin-bottom:24px; }
+  .day-block {
+    padding:16px; background:var(--light-gray); border-radius:var(--radius);
+    margin-bottom:12px; border-left:4px solid var(--gold);
+  }
+  .day-block h4 {
+    font-weight:700; color:var(--navy); margin-bottom:8px;
+    font-size:14px; letter-spacing:0.5px;
+  }
+  .day-block ul {
+    list-style:none; margin:0; padding:0;
+  }
+  .day-block li {
+    color:var(--body-text); font-size:13px; line-height:1.6;
+    padding:4px 0; padding-left:20px; position:relative;
+  }
+  .day-block li:before {
+    content:"✓"; position:absolute; left:0;
+    color:var(--gold); font-weight:bold;
+  }
+  .modal-highlights {
+    display:flex; flex-wrap:wrap; gap:8px;
+    padding:16px 0; border-top:1px solid var(--light-gray);
+    margin-top:24px;
+  }
+  .modal-highlights .tag {
+    background:rgba(0,168,166,0.1); color:var(--teal);
+    padding:6px 12px; border-radius:50px; font-size:12px;
+    font-weight:600;
+  }
+  .package-info-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+    margin-bottom:24px;
+  }
+  .package-info-box {
+    background:var(--off-white); border:1px solid rgba(0,0,0,0.06);
+    border-radius:var(--radius); padding:18px;
+  }
+  .package-info-box h4 {
+    font-size:15px; color:var(--navy); font-weight:700;
+    margin-bottom:12px; display:flex; align-items:center; gap:8px;
+  }
+  .package-info-box h4 i { color:var(--gold); }
+  .package-info-box ul {
+    list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;
+  }
+  .package-info-box li {
+    color:var(--body-text); font-size:13px; line-height:1.5;
+    padding-left:20px; position:relative;
+  }
+  .package-info-box li:before {
+    position:absolute; left:0; top:0; font-weight:700;
+  }
+  .package-info-box.inclusions li:before { content:"+"; color:var(--teal); }
+  .package-info-box.exclusions li:before { content:"-"; color:var(--gold); }
+  .modal-cta {
+    display:flex; gap:12px; margin-top:24px;
+  }
+  .modal-cta button {
+    flex:1; padding:12px 24px; border:none;
+    border-radius:var(--radius); font-weight:600;
+    cursor:pointer; transition:var(--transition);
+  }
+  .modal-enquire {
+    background:linear-gradient(135deg, var(--gold), var(--gold-light));
+    color:var(--navy);
+  }
+  .modal-enquire:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(200,151,58,0.3); }
+  .modal-close-btn {
+    background:var(--light-gray); color:var(--navy);
+  }
+  .modal-close-btn:hover { background:var(--mid-gray); color:white; }
+
+  @media(max-width:768px) {
+    .modal-content { max-width:90vw; padding:30px 20px; }
+    .modal-title { font-size:24px; }
+    .package-info-grid { grid-template-columns:1fr; }
+  }
+
+  /* ===================== COMPLETE RESPONSIVE PASS ===================== */
+  img, iframe, video { max-width:100%; }
+  button, input, select, textarea { max-width:100%; }
+  a, button { min-width:0; }
+  p, h1, h2, h3, h4, h5, h6, a, span, li { overflow-wrap:anywhere; }
+  .hero-title, .section-title, .page-hero-title, .welcome-text h2,
+  .custom-tour-section h3, .pkg-body h3, .modal-title, .service-modal h2 {
+    hyphens:auto;
+    word-break:normal;
+  }
+
+  @media(max-width:1180px) {
+    .header-inner, .hero-content, .container, .footer-grid, .footer-bottom {
+      max-width:100%;
+    }
+    nav a { padding:8px 10px; font-size:13px; }
+    .nav-cta { padding:9px 14px !important; }
+    .logo-text .name { font-size:16px; }
+    .packages-grid, .services-grid, .vehicles-grid {
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+  }
+
+  @media(max-width:900px) {
+    .hero { min-height:560px; height:auto; padding:130px 0 96px; }
+    .hero-scroll { display:none; }
+    .about-hero { padding:118px 20px 66px; }
+    .section-header { margin-bottom:42px; }
+    .section-desc { font-size:16px; }
+    .welcome-stats { flex-wrap:wrap; gap:22px; }
+    .stat-item { flex:1 1 120px; }
+    .service-modal-content, .modal-content {
+      width:calc(100vw - 32px);
+      max-width:680px;
+      max-height:calc(100dvh - 32px);
+    }
+    .modal-duration { align-items:flex-start; flex-direction:column; gap:10px; }
+    .tab-content > div[style*="grid-template-columns:1fr 1fr"],
+    .tab-content .trust-grid[style*="grid-template-columns:1fr 1fr"],
+    .tab-content .why-grid[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns:1fr !important;
+    }
+  }
+
+  @media(max-width:768px) {
+    body { font-size:15px; }
+    .header-inner { height:64px; padding:0 16px; }
+    .pt-header { padding-top:64px; }
+    .mobile-nav {
+      top:64px;
+      justify-content:flex-start;
+      padding:30px 18px max(30px, env(safe-area-inset-bottom));
+      overflow-y:auto;
+    }
+    .mobile-nav a { font-size:20px; padding:13px 20px; }
+    .logo-img { width:46px; height:46px; }
+    .logo-text .tagline { font-size:9px; letter-spacing:1px; }
+    .hero { min-height:0; padding:118px 0 86px; }
+    .hero-content { padding:0 18px; }
+    .hero-badge {
+      max-width:100%;
+      white-space:normal;
+      border-radius:16px;
+      line-height:1.45;
+      margin-bottom:22px;
+    }
+    .hero-subtitle { max-width:100%; line-height:1.65; margin-bottom:30px; }
+    .hero-indicators { bottom:24px; }
+    section { padding:58px 18px; }
+    .section-label::before, .section-label::after { width:18px; }
+    .section-label::before { right:calc(100% + 8px); }
+    .section-label::after { left:calc(100% + 8px); }
+    .welcome-img { aspect-ratio:16/11; }
+    .welcome-badge {
+      position:relative;
+      inset:auto;
+      margin:-42px auto 0;
+      width:min(220px, 86%);
+    }
+    .why-grid, .services-grid, .testimonials-grid, .trust-grid,
+    .packages-grid, .car-services-grid, .vehicles-grid {
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+    .service-card { min-height:250px; aspect-ratio:auto; }
+    .service-arrow { transform:none; opacity:1; }
+    .mv-card, .custom-tour-section { padding:28px 22px; }
+    .timeline { padding-left:0; }
+    .timeline::before { left:10px; }
+    .timeline-item { gap:18px; align-items:flex-start; margin-bottom:28px; }
+    .timeline-content { padding:20px; }
+    .timeline-dot { width:20px; height:20px; margin-top:18px; }
+    .packages-tabs {
+      justify-content:flex-start;
+      flex-wrap:nowrap;
+      overflow-x:auto;
+      padding-bottom:8px;
+      margin:0 -18px 38px;
+      padding-left:18px;
+      padding-right:18px;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .tab-btn {
+      flex:0 0 auto;
+      scroll-snap-align:start;
+      padding:10px 18px;
+      white-space:nowrap;
+    }
+    .custom-step { align-items:flex-start; }
+    .vehicle-img { height:auto; aspect-ratio:16/10; }
+    .contact-item { gap:14px; }
+    .contact-ico { width:40px; height:40px; }
+    .hours-row { gap:14px; flex-wrap:wrap; }
+    .map-container { height:320px; border-radius:0; margin:0 -18px; }
+    footer { padding:52px 18px 0; }
+    .footer-brand p { max-width:none; }
+    .footer-bottom { align-items:flex-start; flex-direction:column; }
+    .float-group {
+      right:16px;
+      bottom:max(16px, env(safe-area-inset-bottom));
+      gap:10px;
+    }
+    .float-btn { width:48px; height:48px; font-size:20px; }
+    .float-label { display:none; }
+    .service-modal { padding:16px; align-items:flex-start; overflow-y:auto; }
+    .service-modal-content {
+      width:100%;
+      max-height:none;
+      margin:auto 0;
+      padding:28px 20px;
+    }
+    .service-modal-image { height:auto; aspect-ratio:16/10; }
+    .service-modal-buttons, .modal-cta { flex-direction:column; }
+    .service-modal-buttons .btn-primary, .service-modal-buttons .btn-outline,
+    .modal-cta button, .form-submit {
+      width:100%;
+      justify-content:center;
+    }
+    .modal {
+      padding:16px;
+      align-items:flex-start;
+      overflow-y:auto;
+    }
+    .modal-content {
+      width:100%;
+      max-width:none;
+      max-height:none;
+      padding:30px 20px;
+      margin:auto 0;
+    }
+  }
+
+  @media(max-width:560px) {
+    .logo-wrap { gap:10px; }
+    .logo-text .name { font-size:14px; }
+    .logo-text .tagline { display:none; }
+    .hero-title, .page-hero-title { line-height:1.08; }
+    .hero-title { font-size:clamp(29px,8.4vw,33px); max-width:100%; }
+    .hero-title span { display:block; }
+    .hero-btns { flex-direction:column; align-items:stretch; }
+    .hero-btns .btn-primary, .hero-btns .btn-outline {
+      width:100%;
+      justify-content:center;
+      padding-left:18px;
+      padding-right:18px;
+    }
+    .hero-subtitle, .page-hero-sub, .cta-section p { font-size:15px; }
+    .section-title { font-size:clamp(26px,9vw,34px); }
+    .welcome-text h2 { font-size:clamp(24px,7.4vw,29px); }
+    .welcome-text h2 em { display:block; }
+    .section-label { max-width:72vw; line-height:1.5; }
+    .section-label::before, .section-label::after { display:none; }
+    .welcome-stats { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .welcome-stats .stat-item:last-child:nth-child(odd) { grid-column:1/-1; }
+    .trust-card, .contact-item { flex-direction:column; }
+    .contact-item { margin-bottom:24px; }
+    .pkg-body, .vehicle-body { padding:20px; }
+    .pkg-highlights, .vehicle-features { gap:8px; }
+    .car-form-wrap, .contact-info-card, .contact-form-card {
+      padding:26px 18px;
+      border-radius:var(--radius);
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      font-size:16px;
+      padding:12px 14px;
+    }
+    .form-submit { padding:14px 22px; }
+    .modal-title, .service-modal h2 { padding-right:28px; }
+  }
+
+  @media(max-width:380px) {
+    .header-inner { padding:0 12px; }
+    .logo-img { width:42px; height:42px; }
+    .logo-text .name { max-width:150px; }
+    .hero-content, section { padding-left:14px; padding-right:14px; }
+    .hero-badge { font-size:10px; padding:8px 12px; }
+    .hero-title { font-size:clamp(27px,8vw,30px); }
+    .btn-primary, .btn-outline { padding-left:18px; padding-right:18px; }
+    .welcome-stats { grid-template-columns:1fr; }
+    .packages-tabs { margin-left:-14px; margin-right:-14px; padding-left:14px; padding-right:14px; }
+    .custom-tour-section, .mv-card, .day-block, .package-info-box { padding:18px; }
+    .map-container { margin-left:-14px; margin-right:-14px; }
+    .float-btn { width:44px; height:44px; font-size:18px; }
+  }
+
+  @media(max-height:620px) and (orientation:landscape) {
+    .hero {
+      min-height:0;
+      height:auto;
+      padding:108px 0 70px;
+    }
+    .mobile-nav {
+      justify-content:flex-start;
+      padding-top:18px;
+      padding-bottom:18px;
+      overflow-y:auto;
+    }
+    .mobile-nav a { font-size:18px; padding:10px 20px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="mainHeader">
+  <div class="header-inner">
+    <a class="logo-wrap" href="#" onclick="showPage('home')">
+      <img src="logo.png" alt="RNS Tours & Travels" class="logo-img">
+      <div class="logo-text">
+        <div class="name">RNS Tours & Travels</div>
+        <div class="tagline">Est. 2004 · Bengaluru</div>
+      </div>
+    </a>
+    <nav>
+      <a href="#" class="active" id="nav-home" onclick="showPage('home'); return false;">Home</a>
+      <a href="#" id="nav-about" onclick="showPage('about'); return false;">About</a>
+      <a href="#" id="nav-packages" onclick="showPage('packages'); return false;">Tour Packages</a>
+      <a href="#" id="nav-car" onclick="showPage('car'); return false;">Car Rental</a>
+      <a href="#" id="nav-contact" class="nav-cta" onclick="showPage('contact'); return false;">Contact Us</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="showPage('home'); toggleMobileNav(); return false;">Home</a>
+  <a href="#" onclick="showPage('about'); toggleMobileNav(); return false;">About Us</a>
+  <a href="#" onclick="showPage('packages'); toggleMobileNav(); return false;">Tour Packages</a>
+  <a href="#" onclick="showPage('car'); toggleMobileNav(); return false;">Car Rental</a>
+  <a href="#" onclick="showPage('contact'); toggleMobileNav(); return false;">Contact Us</a>
+</div>
+
+<!-- ===================== PAGE: HOME ===================== -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-star"></i> Trusted Travel Partner Since 2004</div>
+      <h1 class="hero-title">Explore India & The World With <span>RNS Tours & Travels</span></h1>
+      <p class="hero-subtitle">Creating unforgettable travel experiences since 2004. From heritage heartlands to exotic shores — your journey begins here.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary" onclick="showPage('packages'); return false;"><i class="fas fa-map-marked-alt"></i> Explore Packages</a>
+        <a href="#" class="btn-outline" onclick="showPage('contact'); return false;"><i class="fas fa-phone-alt"></i> Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-indicators">
+      <div class="hero-dot active" onclick="goSlide(0)"></div>
+      <div class="hero-dot" onclick="goSlide(1)"></div>
+      <div class="hero-dot" onclick="goSlide(2)"></div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </div>
+
+  <!-- Welcome -->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-img-wrap">
+          <img class="welcome-img" src="https://images.unsplash.com/photo-1603792907191-89e55f70099a?w=800&q=80" alt="India Heritage Travel">
+          <div class="welcome-badge">
+            <span class="num">20+</span>
+            <span class="lbl">Years of<br>Excellence</span>
+          </div>
+        </div>
+        <div class="welcome-text">
+          <div class="section-label">Welcome</div>
+          <h2>Welcome To <em>RNS Tours & Travels</em></h2>
+          <p>With immense pleasure, we introduce RNS Tours & Travels, based out of Bengaluru. We specialize in group tours and customized holiday packages to some of the most famous heritage destinations across India.</p>
+          <p>Our passion is to showcase India's rich cultural heritage while providing the best travel experience. We offer carefully handcrafted tour packages giving deep insights into India's diverse culture, traditional cuisine, historical monuments, and architectural wonders.</p>
+          <p>In addition to domestic tours, we provide a wide range of international travel packages that can be fully customized to suit your preferences, budget, and travel needs. At RNS Tours & Travels, we believe every journey should create unforgettable memories.</p>
+          <div class="welcome-stats">
+            <div class="stat-item">
+              <span class="stat-num">20+</span>
+              <span class="stat-lbl">Years Est.</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">5000+</span>
+              <span class="stat-lbl">Happy Travelers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100+</span>
+              <span class="stat-lbl">Destinations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">50+</span>
+              <span class="stat-lbl">Tour Packages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section style="background:var(--white)">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Why Us</div>
+        <h2 class="section-title">Why Travelers Choose <span>RNS Holidays</span></h2>
+        <p class="section-desc">Two decades of dedication to crafting perfect travel experiences sets us apart.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon"><i class="fas fa-medal"></i></div><h4>Established in 2004</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-sliders-h"></i></div><h4>Customized Tour Packages</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-globe-asia"></i></div><h4>Domestic & International Tours</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-landmark"></i></div><h4>Heritage Travel Specialists</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-om"></i></div><h4>Pilgrimage Tours</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-users"></i></div><h4>Group Tours</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-home"></i></div><h4>Family Vacations</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-briefcase"></i></div><h4>Corporate Trips</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><h4>Trusted Service</h4></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-headset"></i></div><h4>End-to-End Assistance</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Services</div>
+        <h2 class="section-title" style="color:white">Explore Our <span style="color:var(--gold-light)">Travel Services</span></h2>
+        <p class="section-desc">From heritage heartlands to exotic destinations, we craft every journey with care.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" onclick="openServiceModal('domestic'); return false;" style="cursor:pointer;">
+          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80" alt="Domestic Tours">
+          <div class="service-overlay">
+            <span class="service-tag">Most Popular</span>
+            <h3>Domestic Tours</h3>
+            <p>Explore the magnificent landscapes and cultures of incredible India.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('international'); return false;" style="cursor:pointer;">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="International Tours">
+          <div class="service-overlay">
+            <h3>International Tours</h3>
+            <p>Curated international packages to the world's most breathtaking destinations.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('heritage'); return false;" style="cursor:pointer;">
+          <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80" alt="Heritage Tours">
+          <div class="service-overlay">
+            <span class="service-tag">Specialty</span>
+            <h3>Heritage Tours</h3>
+            <p>Immerse in India's timeless heritage, architecture, and culture.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('pilgrimage'); return false;" style="cursor:pointer;">
+          <img src="https://chardhambooking.com/wp-content/uploads/2021/01/shutterstock_667586995.jpg" alt="Pilgrimage Tours">
+          <div class="service-overlay">
+            <h3>Pilgrimage Tours</h3>
+            <p>Spiritual journeys to India's most sacred and revered destinations.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('group'); return false;" style="cursor:pointer;">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Group Tours">
+          <div class="service-overlay">
+            <h3>Group Tours</h3>
+            <p>Expertly organized group travel with seamless logistics and great camaraderie.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('corporate'); return false;" style="cursor:pointer;">
+          <img src="https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=600&q=80" alt="Corporate Tours">
+          <div class="service-overlay">
+            <h3>Corporate Travel</h3>
+            <p>Professional corporate tours, team outings, and MICE travel solutions.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card" onclick="openServiceModal('honeymoon'); return false;" style="cursor:pointer;">
+          <img src="https://cdn0.weddingwire.in/article-gallery-o/00000/3_2/960/jpg/articulos-india/2017/best-honeymoon-places-in-india/fotosaints-india.jpeg" alt="Honeymoon Packages">
+          <div class="service-overlay">
+            <h3>Honeymoon Packages</h3>
+            <p>Romantic escapes crafted with love for the most special journey of your life.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="https://www.sostravelhouse.com/public/uploads/images/theme/6740625d93b74.webp" alt="Family Packages">
+          <div class="service-overlay">
+            <h3>Family Packages</h3>
+            <p>Thoughtfully designed family holidays creating memories for every generation.</p>
+            <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What Our Travelers <span>Say</span></h2>
+        <p class="section-desc">Real stories from real travelers who entrusted us with their precious journeys.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Our Rajasthan heritage tour arranged by RNS was absolutely flawless. Every fort, palace, and experience was meticulously planned. The team's knowledge of the history was outstanding!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Ramesh & Sunitha Kumar</div>
+              <div class="testi-location">Bengaluru · Rajasthan Heritage Tour</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Took the Dubai package for our 25th anniversary and it exceeded every expectation. Comfortable accommodation, well-planned sightseeing, and excellent support throughout. Thank you RNS!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Pradeep & Meena Sharma</div>
+              <div class="testi-location">Mysuru · Dubai Package</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Organized a group pilgrimage tour to Tirupati and Shirdi for 45 people. RNS handled everything with great professionalism. The arrangements were impeccable. Highly recommend!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sri Venkateswara Association</div>
+              <div class="testi-location">Bengaluru · Group Pilgrimage Tour</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Kerala backwaters trip with my family was a dream come true. The houseboat, the food, the backwaters — RNS Tours curated it perfectly. We're already planning our next trip with them!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Ashok Nair Family</div>
+              <div class="testi-location">Bengaluru · Kerala Backwaters</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Corporate team outing to Coorg arranged by RNS was perfect. Seamless coordination, great resort, exciting activities. Our entire team of 80 had an amazing time. Will definitely use again."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">V</div>
+            <div>
+              <div class="testi-name">Vijay Krishnamurthy, HR Head</div>
+              <div class="testi-location">Bengaluru · Corporate Outing</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Thailand trip was beyond our expectations. From Bangkok to Phuket, every detail was taken care of. RNS Tours has been our go-to travel partner for 7 years now and they never disappoint!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">K</div>
+            <div>
+              <div class="testi-name">Kavitha & Ravi Menon</div>
+              <div class="testi-location">Bengaluru · Thailand Package</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="padding:0">
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-label" style="color:var(--gold-light)">Get Started</div>
+        <h2>Start Planning Your Next Journey Today</h2>
+        <p>Let our expert travel advisors craft the perfect itinerary for you. Personalized service, hassle-free travel.</p>
+        <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="margin:0 auto; display:inline-flex;">
+          <i class="fas fa-paper-plane"></i> Contact Us Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end home page -->
+
+<!-- ===================== PAGE: ABOUT ===================== -->
+<div class="page" id="page-about">
+  <div class="pt-header">
+    <div class="about-hero">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="page-hero-label">About RNS Tours & Travels</div>
+        <h1 class="page-hero-title">Our Story of <span>Passion & Purpose</span></h1>
+        <p class="page-hero-sub">Two decades of crafting meaningful journeys across India and the world, rooted in Bengaluru.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="welcome-grid">
+          <div>
+            <div class="section-label">Our Story</div>
+            <h2 class="section-title">A Bengaluru Legacy <span>Since 2004</span></h2>
+            <p style="line-height:1.85;color:var(--body-text);font-size:16px;margin-bottom:16px">RNS Tours & Travels is a Bengaluru-based travel company serving travelers since 2004. We are committed to creating memorable travel experiences through personalized services, carefully planned itineraries, and exceptional customer support.</p>
+            <p style="line-height:1.85;color:var(--body-text);font-size:16px;margin-bottom:16px">Born from a deep love for India's rich cultural tapestry, we began with a mission to make heritage travel accessible, meaningful, and truly unforgettable. Over two decades, we have grown into a full-service travel agency offering domestic, international, and specialized niche travel.</p>
+            <p style="line-height:1.85;color:var(--body-text);font-size:16px;margin-bottom:28px">Our team of experienced travel advisors brings deep destination knowledge, strong vendor relationships, and a genuine passion for creating journeys that transform travelers.</p>
+            <a href="#" class="btn-primary" onclick="showPage('packages'); return false;"><i class="fas fa-map"></i> View Our Packages</a>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80" alt="About RNS Tours" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--off-white);padding:80px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Purpose</div>
+          <h2 class="section-title">Our <span>Mission & Vision</span></h2>
+        </div>
+        <div class="mission-vision-grid">
+          <div class="mv-card mission">
+            <div class="mv-icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>To provide memorable, comfortable, and affordable travel experiences while promoting cultural exploration and ensuring complete customer satisfaction at every step of the journey.</p>
+          </div>
+          <div class="mv-card vision">
+            <div class="mv-icon">🌟</div>
+            <h3>Our Vision</h3>
+            <p>To become one of India's most trusted travel partners for both domestic and international tourism, known for exceptional service, reliability, and creating journeys that last a lifetime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Trust</div>
+          <h2 class="section-title">Why Travelers <span>Trust Us</span></h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-award"></i></div>
+            <div class="trust-content"><h4>20+ Years Experience</h4><p>Two decades of industry expertise ensuring every trip is perfectly orchestrated.</p></div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <div class="trust-content"><h4>Customized Packages</h4><p>Every itinerary tailored to your unique preferences, budget, and travel style.</p></div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="trust-content"><h4>Experienced Advisors</h4><p>Our team carries deep destination knowledge and genuine travel enthusiasm.</p></div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-headset"></i></div>
+            <div class="trust-content"><h4>Dedicated Support</h4><p>24/7 assistance before, during, and after your travels for total peace of mind.</p></div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-route"></i></div>
+            <div class="trust-content"><h4>Reliable Planning</h4><p>Meticulous itinerary planning with attention to every logistical detail.</p></div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon"><i class="fas fa-heart"></i></div>
+            <div class="trust-content"><h4>Personalized Service</h4><p>We treat every traveler as a valued guest, not just another booking.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--off-white);padding:80px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Journey</div>
+          <h2 class="section-title">Our <span>Company Timeline</span></h2>
+          <p class="section-desc">Two decades of growth, milestones, and thousands of happy travelers.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2004</div>
+              <h4>Company Founded</h4>
+              <p>RNS Tours & Travels established in Bengaluru with a vision to deliver exceptional travel experiences.</p>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="spacer"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="spacer"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2007</div>
+              <h4>Domestic Tour Expansion</h4>
+              <p>Expanded operations to cover all major heritage circuits across India including Rajasthan, Tamil Nadu, and Kerala.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2010</div>
+              <h4>International Packages Launched</h4>
+              <p>Added international tour packages covering Southeast Asia, Middle East, and European destinations.</p>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="spacer"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="spacer"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2014</div>
+              <h4>Corporate Travel Services</h4>
+              <p>Introduced dedicated corporate travel solutions including MICE, team outings, and business travel management.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2024</div>
+              <h4>20 Years of Excellence</h4>
+              <p>Celebrating two decades of trusted travel service with a growing customer base across India and beyond.</p>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="spacer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container" style="padding:0">
+        <div class="section-header" style="margin-bottom:0">
+          <h2>Ready to Travel With Us?</h2>
+          <p>Get in touch with our expert travel advisors and start planning your dream journey.</p>
+          <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="margin:0 auto; display:inline-flex;"><i class="fas fa-envelope"></i> Get In Touch</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ===================== PAGE: PACKAGES ===================== -->
+<div class="page" id="page-packages">
+  <div class="pt-header">
+    <div class="about-hero">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="page-hero-label">Tour Packages</div>
+        <h1 class="page-hero-title">Journeys Crafted <span>Just For You</span></h1>
+        <p class="page-hero-sub">From Himalayan peaks to tropical shores — explore our handpicked travel experiences.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="packages-tabs">
+          <button class="tab-btn active" onclick="switchTab(this,'domestic')">🇮🇳 Domestic</button>
+          <button class="tab-btn" onclick="switchTab(this,'international')">🌍 International</button>
+          <button class="tab-btn" onclick="switchTab(this,'custom')">✨ Customized</button>
+          <button class="tab-btn" onclick="switchTab(this,'group')">👥 Group Tours</button>
+          <button class="tab-btn" onclick="switchTab(this,'family')">👨‍👩‍👧 Family Holidays</button>
+          <button class="tab-btn" onclick="switchTab(this,'pilgrimage')">🙏 Pilgrimage</button>
+          <button class="tab-btn" onclick="switchTab(this,'corporate')">💼 Corporate</button>
+        </div>
+
+        <!-- Domestic -->
+        <div class="tab-content active" id="tab-domestic">
+          <div class="packages-grid">
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://d3umcq5hn0b5ek.cloudfront.net/tour-images/karnataka-heritage-tour/Karnataka-Heritage-Tour2.jpg" alt="Karnataka Heritage"><span class="pkg-badge">Karnataka</span></div>
+              <div class="pkg-body">
+                <h3>Karnataka Heritage Tour</h3>
+                <p>Hoysala temples, Hampi ruins, Mysore Palace, and Coorg landscapes in one heritage-rich journey.</p>
+                <div class="pkg-highlights"><span>7 Days</span><span>Heritage</span><span>Guided</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('karnataka')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala"><span class="pkg-badge">Kerala</span></div>
+              <div class="pkg-body">
+                <h3>Kerala Backwaters Tour</h3>
+                <p>Serene backwaters, tea estates, beaches, and a luxury houseboat experience in God's Own Country.</p>
+                <div class="pkg-highlights"><span>6 Days</span><span>Nature</span><span>Houseboat</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('kerala')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80" alt="Tamil Nadu"><span class="pkg-badge">Tamil Nadu</span></div>
+              <div class="pkg-body">
+                <h3>Tamil Nadu Temple Tour</h3>
+                <p>Dravidian temple architecture, Mahabalipuram, Madurai, and sacred cultural landmarks.</p>
+                <div class="pkg-highlights"><span>8 Days</span><span>Pilgrimage</span><span>Culture</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('tamilnadu')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80" alt="Rajasthan"><span class="pkg-badge">Rajasthan</span></div>
+              <div class="pkg-body">
+                <h3>Rajasthan Heritage Tour</h3>
+                <p>Royal forts, Udaipur lakes, Jodhpur's blue city, and Thar Desert cultural experiences.</p>
+                <div class="pkg-highlights"><span>10 Days</span><span>Royal</span><span>Adventure</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('rajasthan')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80" alt="Golden Triangle"><span class="pkg-badge">Golden Triangle</span></div>
+              <div class="pkg-body">
+                <h3>Golden Triangle Tour</h3>
+                <p>The classic Delhi, Agra, and Jaipur circuit with the Taj Mahal and iconic heritage sites.</p>
+                <div class="pkg-highlights"><span>6 Days</span><span>UNESCO</span><span>Classic</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('golden-triangle')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://i0.wp.com/alternativetoursindia.com/wp-content/uploads/2024/04/Golden-triangle-puri-Odisha-Tour.jpg?resize=1014%2C570" alt="Odisha Golden Triangle"><span class="pkg-badge">Odisha</span></div>
+              <div class="pkg-body">
+                <h3>Odisha Golden Triangle Tour</h3>
+                <p>Puri, Konark, Bhubaneswar, Raghurajpur, Chilika, and Pipli in a compact cultural route.</p>
+                <div class="pkg-highlights"><span>3N 4D</span><span>Temple</span><span>Culture</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('odisha-golden-triangle')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?w=600&q=80" alt="Goa"><span class="pkg-badge">Goa</span></div>
+              <div class="pkg-body">
+                <h3>Goa Beach Holiday</h3>
+                <p>Beach relaxation, Portuguese heritage, lively markets, water sports, and coastal dining.</p>
+                <div class="pkg-highlights"><span>5 Days</span><span>Beach</span><span>Leisure</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('goa')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/39/20/d9/the-heaven-of-a-grasshopper.jpg?w=900&h=-1&s=1" alt="Kashmir"><span class="pkg-badge">Kashmir</span></div>
+              <div class="pkg-body">
+                <h3>Kashmir Valley Tour</h3>
+                <p>Srinagar, Gulmarg, Pahalgam, houseboats, gardens, and Himalayan valley scenery.</p>
+                <div class="pkg-highlights"><span>7 Days</span><span>Scenic</span><span>Family</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('kashmir')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://nenow.in/wp-content/uploads/2025/06/spiti-2792129_1280.jpg" alt="Himachal"><span class="pkg-badge">Himachal</span></div>
+              <div class="pkg-body">
+                <h3>Himachal Mountain Escape</h3>
+                <p>Shimla, Manali, mountain roads, pine forests, adventure activities, and peaceful hill stays.</p>
+                <div class="pkg-highlights"><span>8 Days</span><span>Hills</span><span>Adventure</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('himachal')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=600&q=80" alt="Andaman"><span class="pkg-badge">Andaman</span></div>
+              <div class="pkg-body">
+                <h3>Andaman Island Escape</h3>
+                <p>Port Blair, Havelock, Neil Island, coral beaches, cellular jail, and relaxed island time.</p>
+                <div class="pkg-highlights"><span>6 Days</span><span>Beach</span><span>Island</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('andaman')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://himachal.blog/wp-content/uploads/2024/01/lakshadweep-island-tour.jpg" alt="Lakshadweep"><span class="pkg-badge">Lakshadweep</span></div>
+              <div class="pkg-body">
+                <h3>Lakshadweep Lagoon Holiday</h3>
+                <p>Crystal lagoons, quiet beaches, snorkeling, island stays, and slow tropical days.</p>
+                <div class="pkg-highlights"><span>5 Days</span><span>Lagoon</span><span>Snorkeling</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('lakshadweep')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://www.lehladakhtourism.com/maitreya-buddha/images/maitreya-buddha1.jpg" alt="Leh Ladakh"><span class="pkg-badge">Ladakh</span></div>
+              <div class="pkg-body">
+                <h3>Leh Ladakh Adventure</h3>
+                <p>High passes, monasteries, Nubra Valley, Pangong Lake, and dramatic Himalayan landscapes.</p>
+                <div class="pkg-highlights"><span>7 Days</span><span>Adventure</span><span>Himalayan</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('leh-ladakh')">View Details</button>
+              </div>
+            </div>
+            <div class="pkg-card">
+              <div class="pkg-img"><img src="https://travelogyindia.b-cdn.net/storage/app/article/993/travel-permit-to-visit-north-east-india-thumb.jpg" alt="North East India"><span class="pkg-badge">North East</span></div>
+              <div class="pkg-body">
+                <h3>North East & Seven Sisters Tour</h3>
+                <p>Meghalaya waterfalls, Assam culture, Kaziranga wildlife, and scenic Himalayan foothills.</p>
+                <div class="pkg-highlights"><span>8 Days</span><span>Scenic</span><span>Culture</span></div>
+                <button class="btn-enquire" onclick="openPackageModal('north-east-seven-sisters')">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- International -->
+        <div class="tab-content" id="tab-international">
+          <div class="packages-grid">
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai"><span class="pkg-badge">Dubai</span></div><div class="pkg-body"><h3>Dubai Discovery</h3><p>Modern skylines, desert safari, dhow cruise, shopping, and family-friendly city attractions.</p><div class="pkg-highlights"><span>5 Days</span><span>City</span><span>Desert</span></div><button class="btn-enquire" onclick="openPackageModal('dubai')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Singapore"><span class="pkg-badge">Singapore</span></div><div class="pkg-body"><h3>Singapore City Break</h3><p>Marina Bay, Sentosa, gardens, clean city experiences, and easy family sightseeing.</p><div class="pkg-highlights"><span>5 Days</span><span>Family</span><span>City</span></div><button class="btn-enquire" onclick="openPackageModal('singapore')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80" alt="Thailand"><span class="pkg-badge">Thailand</span></div><div class="pkg-body"><h3>Thailand Explorer</h3><p>Bangkok temples, Phuket beaches, island hopping, street markets, and Thai culture.</p><div class="pkg-highlights"><span>7 Days</span><span>Beach</span><span>Culture</span></div><button class="btn-enquire" onclick="openPackageModal('thailand')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://gfmag.com/wp-content/uploads/2025/06/shutterstock_2385682333-scaled.jpg" alt="Malaysia"><span class="pkg-badge">Malaysia</span></div><div class="pkg-body"><h3>Malaysia Escapade</h3><p>Kuala Lumpur, Penang, Langkawi, multicultural food, beaches, and landmark experiences.</p><div class="pkg-highlights"><span>6 Days</span><span>City</span><span>Nature</span></div><button class="btn-enquire" onclick="openPackageModal('malaysia')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali"><span class="pkg-badge">Bali</span></div><div class="pkg-body"><h3>Bali Paradise</h3><p>Ubud rice terraces, beaches, temples, spa time, and a relaxed tropical holiday pace.</p><div class="pkg-highlights"><span>7 Days</span><span>Romance</span><span>Wellness</span></div><button class="btn-enquire" onclick="openPackageModal('bali')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Maldives"><span class="pkg-badge">Maldives</span></div><div class="pkg-body"><h3>Maldives Luxury</h3><p>Overwater villas, blue lagoons, snorkeling, spa moments, and quiet island relaxation.</p><div class="pkg-highlights"><span>5 Days</span><span>Honeymoon</span><span>Beach</span></div><button class="btn-enquire" onclick="openPackageModal('maldives')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://distinctdestinations.in/DistinctDestinationsBackEndImg/BlogImage/sri-lanka-an-11-day-journey-through-culture-nature-and-heritage-L-distinctdestinations.jpg" alt="Sri Lanka"><span class="pkg-badge">Sri Lanka</span></div><div class="pkg-body"><h3>Sri Lanka Wonders</h3><p>Sigiriya, Kandy, tea hills, beaches, wildlife, and island heritage in one trip.</p><div class="pkg-highlights"><span>7 Days</span><span>Heritage</span><span>Beach</span></div><button class="btn-enquire" onclick="openPackageModal('srilanka')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://visitworld.today/media/country/image/desktop_image/nJgNbJL5KWjpuzJSxlPMukzIXFazPKn0TM6MsYhv.webp" alt="Bhutan"><span class="pkg-badge">Bhutan</span></div><div class="pkg-body"><h3>Bhutan Himalayan Journey</h3><p>Thimphu, Punakha, Paro, monasteries, mountain passes, and peaceful Himalayan culture.</p><div class="pkg-highlights"><span>6 Days</span><span>Himalayan</span><span>Culture</span></div><button class="btn-enquire" onclick="openPackageModal('bhutan')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80" alt="Vietnam"><span class="pkg-badge">Vietnam</span></div><div class="pkg-body"><h3>Vietnam Highlights</h3><p>Hanoi, Ha Long Bay, Da Nang, Hoi An, Ho Chi Minh City, food, history, and coastlines.</p><div class="pkg-highlights"><span>7 Days</span><span>Cruise</span><span>Culture</span></div><button class="btn-enquire" onclick="openPackageModal('vietnam')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" alt="Nepal"><span class="pkg-badge">Nepal</span></div><div class="pkg-body"><h3>Nepal Himalayan Tour</h3><p>Kathmandu temples, Pokhara lakes, Himalayan views, culture, and gentle adventure.</p><div class="pkg-highlights"><span>6 Days</span><span>Himalayan</span><span>Culture</span></div><button class="btn-enquire" onclick="openPackageModal('nepal')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80" alt="Cruise Tour"><span class="pkg-badge">Cruise</span></div><div class="pkg-body"><h3>International Cruise Tour</h3><p>Premium cruise holiday with ocean views, onboard entertainment, shore visits, and easy travel.</p><div class="pkg-highlights"><span>5 Days</span><span>Cruise</span><span>Leisure</span></div><button class="btn-enquire" onclick="openPackageModal('cruise-tour')">View Details</button></div></div>
+          </div>
+        </div>
+
+        <!-- Custom -->
+        <div class="tab-content" id="tab-custom">
+          <div class="custom-tour-section">
+            <div>
+              <div class="section-label">Personalized</div>
+              <h3>Your Dream Journey, <em style="color:var(--teal)">Crafted Your Way</em></h3>
+              <p>No two travelers are the same. That's why we believe the best journeys are those crafted exclusively around your interests, budget, pace, and travel goals.</p>
+              <p>Our expert travel designers work closely with you to build an itinerary from scratch — choosing destinations, accommodations, activities, and experiences that are perfect for you.</p>
+              <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="margin-top:8px; display:inline-flex;"><i class="fas fa-pencil-alt"></i> Start Planning</a>
+            </div>
+            <div class="custom-steps">
+              <div class="custom-step"><div class="custom-step-num">1</div><div class="custom-step-text"><h5>Share Your Dream</h5><p>Tell us your destination wishlist, travel dates, and group size.</p></div></div>
+              <div class="custom-step"><div class="custom-step-num">2</div><div class="custom-step-text"><h5>We Design Your Itinerary</h5><p>Our advisors craft a personalized travel plan just for you.</p></div></div>
+              <div class="custom-step"><div class="custom-step-num">3</div><div class="custom-step-text"><h5>Review & Refine</h5><p>We fine-tune every detail until it's exactly what you envisioned.</p></div></div>
+              <div class="custom-step"><div class="custom-step-num">4</div><div class="custom-step-text"><h5>Travel Hassle-Free</h5><p>We handle everything while you focus on creating memories.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group -->
+        <div class="tab-content" id="tab-group">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+            <div><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80" alt="Group Tours" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-md)"></div>
+            <div>
+              <div class="section-label">Group Tours</div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--dark-text);margin-bottom:16px">Travel Together, <em style="color:var(--teal)">Create Together</em></h3>
+              <p style="line-height:1.8;margin-bottom:14px">There's a special magic in group travel — the shared laughter at missed turns, the collective awe at a sunrise, the friendships forged over shared meals. At RNS Tours, we orchestrate group travel that maximizes connection and minimizes stress.</p>
+              <p style="line-height:1.8;margin-bottom:24px">Whether you're organizing a family reunion, senior citizen tour, college alumni trip, or community excursion, our group travel specialists handle every logistical detail seamlessly.</p>
+              <div class="why-grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
+                <div class="why-card" style="padding:16px"><div class="why-icon" style="width:36px;height:36px;font-size:16px"><i class="fas fa-users"></i></div><h4>Groups of All Sizes</h4></div>
+                <div class="why-card" style="padding:16px"><div class="why-icon" style="width:36px;height:36px;font-size:16px"><i class="fas fa-bus"></i></div><h4>Dedicated Transport</h4></div>
+                <div class="why-card" style="padding:16px"><div class="why-icon" style="width:36px;height:36px;font-size:16px"><i class="fas fa-hotel"></i></div><h4>Group Accommodations</h4></div>
+                <div class="why-card" style="padding:16px"><div class="why-icon" style="width:36px;height:36px;font-size:16px"><i class="fas fa-user-shield"></i></div><h4>Dedicated Tour Manager</h4></div>
+              </div>
+              <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="display:inline-flex;"><i class="fas fa-phone"></i> Enquire for Groups</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family -->
+        <div class="tab-content" id="tab-family">
+          <div style="text-align:center;max-width:700px;margin:0 auto 48px">
+            <h3 style="font-family:'Playfair Display',serif;font-size:34px;color:var(--dark-text);margin-bottom:14px">Family Holidays Designed With <span style="color:var(--teal)">Every Generation</span> in Mind</h3>
+            <p style="color:var(--body-text);line-height:1.8">From toddler-friendly resorts to senior-accessible itineraries, our family holiday packages ensure every family member has the time of their life.</p>
+          </div>
+          <div class="packages-grid">
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala Family"><span class="pkg-badge">Family Favourite</span></div><div class="pkg-body"><h3>Kerala Family Special</h3><p>Houseboats, wildlife, beaches, and gentle activities planned comfortably for all ages.</p><div class="pkg-highlights"><span>7 Days</span><span>All Ages</span><span>Nature</span></div><button class="btn-enquire" onclick="openPackageModal('kerela-family')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Singapore Family"><span class="pkg-badge">Kids Love It</span></div><div class="pkg-body"><h3>Singapore Family Fun</h3><p>Universal Studios, Night Safari, Sentosa, shopping, and kid-friendly sightseeing.</p><div class="pkg-highlights"><span>6 Days</span><span>Theme Parks</span><span>Family</span></div><button class="btn-enquire" onclick="openPackageModal('singapore-family')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80" alt="Rajasthan Family"><span class="pkg-badge">Heritage & Fun</span></div><div class="pkg-body"><h3>Rajasthan Royale Family</h3><p>Camel safaris, forts, folk performances, palaces, and hands-on cultural fun.</p><div class="pkg-highlights"><span>9 Days</span><span>Heritage</span><span>Adventure</span></div><button class="btn-enquire" onclick="openPackageModal('rajasthan-family')">View Details</button></div></div>
+          </div>
+        </div>
+
+        <!-- Pilgrimage -->
+        <div class="tab-content" id="tab-pilgrimage">
+          <div style="background:linear-gradient(135deg,var(--off-white),var(--white));border-radius:var(--radius-lg);padding:48px;margin-bottom:48px;text-align:center">
+            <div style="font-size:48px;margin-bottom:16px">🙏</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--dark-text);margin-bottom:12px">Sacred Journeys, <span style="color:var(--teal)">Organized with Devotion</span></h3>
+            <p style="color:var(--body-text);line-height:1.8;max-width:600px;margin:0 auto">We approach every pilgrimage tour with the reverence and care it deserves. Our experienced coordinators ensure comfortable travel, timely darshans, and a spiritually fulfilling experience.</p>
+          </div>
+          <div class="packages-grid">
+            <div class="pkg-card"><div class="pkg-img"><img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/12/tirumala-pti-1640594654.jpg" alt="Tirupati"><span class="pkg-badge">South India</span></div><div class="pkg-body"><h3>Tirupati Darshan Tour</h3><p>Organized Sri Venkateswara Temple darshan with stay, transport, and guided assistance.</p><div class="pkg-highlights"><span>3 Days</span><span>Darshan</span><span>AC Transport</span></div><button class="btn-enquire" onclick="openPackageModal('tirupati')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://chalbanjare.com/crmnew/img_master/package/TrimbakeshwarJyotirlingMandir_17722617000.webp" alt="Shirdi"><span class="pkg-badge">Maharashtra</span></div><div class="pkg-body"><h3>Shirdi - Nashik Circuit</h3><p>Sai Baba darshan with Trimbakeshwar, Nashik ghats, and a compact pilgrimage route.</p><div class="pkg-highlights"><span>4 Days</span><span>Sacred</span><span>Group</span></div><button class="btn-enquire" onclick="openPackageModal('shirdi')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f4/7c/2f.jpg" alt="Varanasi"><span class="pkg-badge">Varanasi</span></div><div class="pkg-body"><h3>Varanasi Kashi Yatra</h3><p>Kashi Vishwanath darshan, Ganga Aarti, Sarnath, sacred ghats, and spiritual walks.</p><div class="pkg-highlights"><span>4 Days</span><span>Kashi</span><span>Ganga Aarti</span></div><button class="btn-enquire" onclick="openPackageModal('varanasi')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://s3.us-west-1.amazonaws.com/goheritagerun.com/wp-content/uploads/2020/01/24125503/Omkareshwar-Maheshwar-FI.jpg" alt="Mahakal Omkar Maheshwar Yatra"><span class="pkg-badge">Madhya Pradesh</span></div><div class="pkg-body"><h3>Mahakal, Omkar & Maheshwar Yatra</h3><p>Ujjain Mahakaleshwar, Omkareshwar Jyotirlinga, Maheshwar Palace, and sacred ghats.</p><div class="pkg-highlights"><span>4 Days</span><span>Jyotirlinga</span><span>Breakfast</span></div><button class="btn-enquire" onclick="openPackageModal('mahakal-omkar-maheshwar')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://www.haridwarrishikeshtourism.com/chardham-yatra/char-dham.jpg" alt="Char Dham"><span class="pkg-badge">North India</span></div><div class="pkg-body"><h3>Char Dham Yatra</h3><p>Badrinath, Kedarnath, Gangotri, and Yamunotri with careful Himalayan travel planning.</p><div class="pkg-highlights"><span>12 Days</span><span>Himalayan</span><span>Sacred</span></div><button class="btn-enquire" onclick="openPackageModal('char-dham')">View Details</button></div></div>
+            <div class="pkg-card"><div class="pkg-img"><img src="https://www.soil2soulexpeditions.com/admin/public/images/blog/image_file/133/Vaishno%20Devi%20dark.png" alt="Vaishno Devi"><span class="pkg-badge">Jammu</span></div><div class="pkg-body"><h3>Vaishno Devi Yatra</h3><p>Mata Vaishno Devi darshan with Katra stay, transfers, and coordinated pilgrimage support.</p><div class="pkg-highlights"><span>4 Days</span><span>Darshan</span><span>Sacred</span></div><button class="btn-enquire" onclick="openPackageModal('vaishno-devi')">View Details</button></div></div>
+          </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="tab-content" id="tab-corporate">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:48px">
+            <div>
+              <div class="section-label">Corporate Travel</div>
+              <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--dark-text);margin-bottom:16px">Professional Travel Solutions for <span style="color:var(--teal)">Every Business Need</span></h3>
+              <p style="line-height:1.8;margin-bottom:14px">From executive travel management to large-scale MICE events, RNS Tours provides comprehensive corporate travel services that keep your team productive, comfortable, and inspired.</p>
+              <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="display:inline-flex;"><i class="fas fa-handshake"></i> Corporate Enquiry</a>
+            </div>
+            <div class="trust-grid" style="grid-template-columns:1fr 1fr">
+              <div class="trust-card"><div class="trust-icon"><i class="fas fa-plane"></i></div><div class="trust-content"><h4>Business Travel</h4><p>Seamless flight & hotel bookings for executives.</p></div></div>
+              <div class="trust-card"><div class="trust-icon"><i class="fas fa-calendar-alt"></i></div><div class="trust-content"><h4>MICE Events</h4><p>Meetings, incentives, conferences & exhibitions.</p></div></div>
+              <div class="trust-card"><div class="trust-icon"><i class="fas fa-users"></i></div><div class="trust-content"><h4>Team Outings</h4><p>Energizing corporate retreats and outings.</p></div></div>
+              <div class="trust-card"><div class="trust-icon"><i class="fas fa-trophy"></i></div><div class="trust-content"><h4>Incentive Tours</h4><p>Rewarding top performers with premium travel.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container" style="padding:0">
+        <div class="section-header" style="margin-bottom:0">
+          <h2>Can't Find What You're Looking For?</h2>
+          <p>Our travel advisors will craft a completely bespoke package just for you. Get in touch today.</p>
+          <a href="#" class="btn-primary" onclick="showPage('contact'); return false;" style="margin:0 auto; display:inline-flex;"><i class="fas fa-phone"></i> Talk to an Expert</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ===================== PAGE: CAR RENTAL ===================== -->
+<div class="page" id="page-car">
+  <div class="pt-header">
+    <div class="about-hero">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="page-hero-label">Car Rental Services</div>
+        <h1 class="page-hero-title">Reliable <span>Car Rental</span> Services</h1>
+        <p class="page-hero-sub">Comfortable, well-maintained vehicles and professional drivers for every journey.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">What We Offer</div>
+          <h2 class="section-title">Car Rental <span>Services</span></h2>
+          <p class="section-desc">From airport pickups to outstation journeys, we cover every transportation need.</p>
+        </div>
+        <div class="car-services-grid">
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-plane-arrival"></i></div><h4>Airport Transfers</h4><p>Punctual pickup and drop to/from Bengaluru & other airports.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-city"></i></div><h4>Local City Travel</h4><p>Comfortable city cabs for sightseeing and daily commutes.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-road"></i></div><h4>Outstation Trips</h4><p>Long-distance journeys to popular outstation destinations.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-briefcase"></i></div><h4>Corporate Travel</h4><p>Professional executive transport for business needs.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-child"></i></div><h4>Family Travel</h4><p>Spacious, child-friendly vehicles for family outings.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-users"></i></div><h4>Group Transportation</h4><p>Tempo travellers and mini-buses for group travel.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-om"></i></div><h4>Pilgrimage Transport</h4><p>Comfortable AC vehicles for temple circuits and pilgrimages.</p></div>
+          <div class="car-service-card"><div class="car-service-icon"><i class="fas fa-heart"></i></div><h4>Wedding Transport</h4><p>Decorated vehicles and fleets for weddings and special events.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--off-white);padding:80px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Fleet</div>
+          <h2 class="section-title">Our Vehicle <span>Categories</span></h2>
+          <p class="section-desc">Choose from our diverse fleet of well-maintained, clean vehicles for your journey.</p>
+        </div>
+        <div class="vehicles-grid">
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://5.imimg.com/data5/SELLER/Default/2024/8/441924568/JX/GS/AO/227526397/14-seater-tempo-traveller-rental-service-500x500.jpeg" alt="Hatchback"></div>
+            <div class="vehicle-body"><h4>Tempo Travellers</h4><p>Compact & economical 9-12 seater for city travel and outstation trips.</p><div class="vehicle-features"><span>9-12 Seats</span><span>AC</span><span>Outstation</span></div></div>
+          </div>
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://cdn-s3.autocarindia.com/legacy/cdni/ExtraImages/20230210032948_WhatsApp_Image_2023_02_10_at_1.png?w=728&q=75" alt="Sedan"></div>
+            <div class="vehicle-body"><h4>Sedans</h4><p>Comfortable sedans ideal for executives and airport transfers.</p><div class="vehicle-features"><span>4+1 Seats</span><span>AC</span><span>Business</span></div></div>
+          </div>
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://images.jdmagicbox.com/quickquotes/images_main/toyota-innova-crysta-2-4-vx-7-str-bs6-silver-271052362-kzdw3.png" alt="SUV"></div>
+            <div class="vehicle-body"><h4>SUVs</h4><p>Spacious SUVs perfect for families and outstation journeys.</p><div class="vehicle-features"><span>6-7 Seats</span><span>AC</span><span>Outstation</span></div></div>
+          </div>
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2025-05/05/thumb/featurecrop/600X300/1746384386-9899.jpg" alt="Luxury"></div>
+            <div class="vehicle-body"><h4>Luxury Cars</h4><p>Premium vehicles for special occasions, weddings, and VIP transport.</p><div class="vehicle-features"><span>Premium</span><span>AC</span><span>VIP</span></div></div>
+          </div>
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://forceurbania.co.in/wp-content/uploads/2022/10/exterior-6-1.jpg" alt="Tempo Traveller"></div>
+            <div class="vehicle-body"><h4>Urbania</h4><p>Ideal for groups of 10–16 for outstation trips and pilgrimages.</p><div class="vehicle-features"><span>10-16 Seats</span><span>AC</span><span>Groups</span></div></div>
+          </div>
+          <div class="vehicle-card">
+            <div class="vehicle-img"><img src="https://www.volvogroup.com/content/dam/volvo-group/markets/global/classic/news/2020/aug/1860x1050-9400-Intercity-coach-BS4-2020.jpg" alt="Mini Bus"></div>
+            <div class="vehicle-body"><h4>Mini Buses & Coaches</h4><p>Larger capacity vehicles for big groups and corporate events.</p><div class="vehicle-features"><span>20-45 Seats</span><span>AC</span><span>Luxury</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--navy);padding:80px 24px">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" style="color:var(--gold)">Why Us</div>
+          <h2 class="section-title" style="color:var(--white)">Why Choose Our <span style="color:var(--gold-light)">Car Rentals</span></h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-id-card"></i></div>
+            <h4 style="color:white">Professional Drivers</h4>
+          </div>
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-car-wash"></i></div>
+            <h4 style="color:white">Clean Vehicles</h4>
+          </div>
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-clock"></i></div>
+            <h4 style="color:white">Timely Service</h4>
+          </div>
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-couch"></i></div>
+            <h4 style="color:white">Comfortable Travel</h4>
+          </div>
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-user-check"></i></div>
+            <h4 style="color:white">Experienced Team</h4>
+          </div>
+          <div class="why-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+            <div class="why-icon"><i class="fas fa-headset"></i></div>
+            <h4 style="color:white">24/7 Assistance</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="car-form-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Book a Ride</div>
+          <h2 class="section-title">Request a <span>Vehicle</span></h2>
+          <p class="section-desc">Fill in your requirements and we'll get back to you with the best options.</p>
+        </div>
+        <div class="car-form-wrap">
+  <h3>Vehicle Booking Request</h3>
+  <p>Send us your travel details and we'll arrange the perfect vehicle for your journey.</p>
+
+  <form action="https://formspree.io/f/xbdbvpwg" method="POST">
+
+    <input type="hidden" name="_subject" value="New Vehicle Booking Request">
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Full name"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number *</label>
+        <input
+          type="tel"
+          name="mobile"
+          placeholder="+91 00000 00000"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Pickup Location *</label>
+        <input
+          type="text"
+          name="pickup_location"
+          placeholder="City / address"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Destination *</label>
+        <input
+          type="text"
+          name="destination"
+          placeholder="Where to?"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Travel Date *</label>
+        <input
+          type="date"
+          name="travel_date"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label>Vehicle Type</label>
+        <select name="vehicle_type">
+          <option value="">Select vehicle type</option>
+          <option>Hatchback</option>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Luxury Car</option>
+          <option>Tempo Traveller</option>
+          <option>Mini Bus</option>
+          <option>Coach</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label>Additional Notes</label>
+        <textarea
+          name="additional_notes"
+          placeholder="Any special requirements..."></textarea>
+      </div>
+
+    </div>
+
+    <button type="submit" class="form-submit">
+      <i class="fas fa-car"></i> Book Now
+    </button>
+
+    <div class="form-success" id="car-success">
+      <i class="fas fa-check-circle"></i>
+      Thank you! Your booking request has been received. Our team will contact you shortly.
+    </div>
+
+  </form>
+</div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===================== PAGE: CONTACT ===================== -->
+<div class="page" id="page-contact">
+  <div class="pt-header">
+    <div class="about-hero">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="page-hero-label">Get In Touch</div>
+        <h1 class="page-hero-title">We'd Love to <span>Hear From You</span></h1>
+        <p class="page-hero-sub">Ready to start planning your dream journey? Reach out to our expert travel advisors.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info-card">
+              <h3>Contact Information</h3>
+              <div class="contact-item">
+                <div class="contact-ico"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h5>Office Address</h5>
+                  <p>MANANDI PINNACLE, 91/1, 10th Main Rd,<br>2nd Block, SBM Colony,<br>Banashankari 1st Stage, Banashankari,<br>Bengaluru, Karnataka 560050</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-ico"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <h5>Phone Numbers</h5>
+                  <p><a href="tel:+919008003485">+91 90080 03485</a></p>
+                  <p><a href="tel:+917019693850">+91 70196 93850</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-ico"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h5>Email Address</h5>
+                  <p><a href="mailto:rnstravels@yahoo.in">rnstravels@yahoo.in</a></p>
+                </div>
+              </div>
+              <div class="contact-hours">
+                <h5>Business Hours</h5>
+                <div class="hours-row"><span>Monday – Saturday</span><span>9:00 AM – 9:00 PM</span></div>
+                <div class="hours-row"><span>Sunday</span><span>By Appointment</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+    <h3>Send Us a Message</h3>
+    <p>Fill in the form and one of our travel advisors will get back to you within 24 hours.</p>
+
+    <form action="https://formspree.io/f/xeedbppd" method="POST">
+
+        <input type="hidden" name="_subject" value="New Enquiry from RNS Tours & Travels Website">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your full name"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 00000 00000"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Tour Requirement</label>
+                <select name="tour_type">
+                    <option value="">Select tour type</option>
+                    <option>Domestic Tour</option>
+                    <option>International Tour</option>
+                    <option>Heritage Tour</option>
+                    <option>Pilgrimage Tour</option>
+                    <option>Group Tour</option>
+                    <option>Family Holiday</option>
+                    <option>Honeymoon Package</option>
+                    <option>Corporate Travel</option>
+                    <option>Car Rental</option>
+                    <option>Customized Package</option>
+                </select>
+            </div>
+
+            <div class="form-group full">
+                <label>Your Message *</label>
+                <textarea
+                    name="message"
+                    placeholder="Tell us about your travel plans, preferred dates, group size, and any special requirements..."
+                    required></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit" class="form-submit">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+        </button>
+
+        <div class="form-success" id="contact-success">
+            <i class="fas fa-check-circle"></i>
+            Your message has been sent! We'll get back to you within 24 hours.
+        </div>
+
+    </form>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" style="padding:0 24px 80px">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:30px">
+          <div class="section-label">Find Us</div>
+          <h2 class="section-title">Our <span>Office Location</span></h2>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=RNS%20TOURS%20%26%20TRAVELS%2C%20Banashankari%201st%20Stage%2C%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===================== SERVICE DETAILS MODAL ===================== -->
+<div id="serviceModal" class="service-modal">
+  <div class="service-modal-content">
+    <button class="service-modal-close" onclick="closeServiceModal()">&times;</button>
+    <img id="modalImage" src="" alt="Service" class="service-modal-image">
+    <span id="modalTag" class="service-modal-tag" style="display:none;"></span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <div id="modalFeatures"></div>
+    <div class="service-modal-buttons">
+      <button class="btn-primary" onclick="showPage('packages'); closeServiceModal();"><i class="fas fa-map-marked-alt"></i> View All Packages</button>
+      <button class="btn-outline" onclick="showPage('contact'); closeServiceModal();"><i class="fas fa-phone-alt"></i> Enquire Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-wrap" style="cursor:default">
+        <img src="logo.png" alt="RNS Tours & Travels" class="logo-img">
+        <div class="logo-text">
+          <div class="name">RNS Tours & Travels</div>
+          <div class="tagline">Est. 2004 · Bengaluru</div>
+        </div>
+      </div>
+      <p>Creating unforgettable travel experiences since 2004. Bengaluru's trusted travel partner for domestic tours, international packages, heritage tours, and car rentals.</p>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://www.facebook.com/share/14g7gBDgh4p/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="social-btn" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a class="social-btn" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a class="social-btn" href="https://wa.me/919008003485" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <div class="footer-links">
+        <a href="#" onclick="showPage('home'); return false;">Home</a>
+        <a href="#" onclick="showPage('about'); return false;">About Us</a>
+        <a href="#" onclick="showPage('packages'); return false;">Tour Packages</a>
+        <a href="#" onclick="showPage('car'); return false;">Car Rental</a>
+        <a href="#" onclick="showPage('contact'); return false;">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Our Services</h5>
+      <div class="footer-links">
+        <a href="#" onclick="showPage('packages'); return false;">Domestic Tours</a>
+        <a href="#" onclick="showPage('packages'); return false;">International Tours</a>
+        <a href="#" onclick="showPage('packages'); return false;">Heritage Tours</a>
+        <a href="#" onclick="showPage('packages'); return false;">Pilgrimage Tours</a>
+        <a href="#" onclick="showPage('packages'); return false;">Group Tours</a>
+        <a href="#" onclick="showPage('packages'); return false;">Corporate Travel</a>
+        <a href="#" onclick="showPage('packages'); return false;">Honeymoon Packages</a>
+        <a href="#" onclick="showPage('car'); return false;">Car Rental</a>
+      </div>
+    </div>
+    <div class="footer-col footer-contact">
+      <h5>Contact Us</h5>
+      <p><i class="fas fa-map-marker-alt"></i>MANANDI PINNACLE, 91/1, 10th Main Rd, 2nd Block, SBM Colony, Banashankari, Bengaluru – 560050</p>
+      <p><i class="fas fa-phone-alt"></i><a href="tel:+919008003485">+91 90080 03485</a></p>
+      <p><i class="fas fa-phone-alt"></i><a href="tel:+917019693850">+91 70196 93850</a></p>
+      <p><i class="fas fa-envelope"></i><a href="mailto:rnstravels@yahoo.in">rnstravels@yahoo.in</a></p>
+      <p><i class="fas fa-clock"></i>Mon–Sat: 9:00 AM – 9:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RNS Tours & Travels. All Rights Reserved.</span>
+    <span>Established in 2004 · Bengaluru, Karnataka, India</span>
+  </div>
+</footer>
+
+<!-- ===================== PACKAGE MODAL ===================== -->
+<div id="packageModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closePackageModal()">&times;</button>
+    <div class="modal-subtitle" id="packageModalBadge">Tour Package</div>
+    <h2 class="modal-title" id="packageModalTitle">Package Name</h2>
+    <div class="modal-duration">
+      <span><i class="fas fa-calendar"></i><span id="packageModalDays">5 Days</span></span>
+      <span><i class="fas fa-map-marker-alt"></i><span id="packageModalLocation">Location</span></span>
+    </div>
+    <p id="packageModalDescription" style="font-size:15px; line-height:1.7; color:var(--body-text); margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid var(--light-gray);"></p>
+    <div class="modal-highlights" id="packageHighlightsContainer" style="padding:16px 0; border-bottom:1px solid var(--light-gray); margin-bottom:24px;"></div>
+    <div class="package-info-grid" id="packageInfoContainer"></div>
+    <div class="itinerary-section" id="packageItineraryContainer"></div>
+    <div class="modal-cta">
+      <button class="modal-enquire" onclick="showPage('contact'); closePackageModal();">Enquire Now</button>
+      <button class="modal-close-btn" onclick="closePackageModal();">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FLOATING BUTTONS ===================== -->
+<div class="float-group">
+  <a class="float-btn float-wa" href="https://wa.me/919008003485?text=Hello%20RNS%20Tours%2C%20I%20would%20like%20to%20enquire%20about%20your%20tour%20packages." target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-label">Chat on WhatsApp</span>
+  </a>
+  <a class="float-btn float-call" href="tel:+919008003485" aria-label="Call Now">
+    <i class="fas fa-phone-alt"></i>
+    <span class="float-label">Call Now</span>
+  </a>
+  <a class="float-btn float-top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+    <span class="float-label">Back to Top</span>
+  </a>
+</div>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  // Page navigation
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + id);
+    if(navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Mobile nav toggle
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Tab switching
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  // Service modal functions
+  const serviceDetails = {
+    'domestic': {
+      title: 'Domestic Tours',
+      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80',
+      tag: 'Most Popular',
+      description: 'Explore the magnificent landscapes and cultures of incredible India with our expertly curated domestic tour packages.',
+      features: '<ul><li>Flexible travel dates and custom itineraries</li><li>Professional guides and comfortable transportation</li><li>Handpicked hotels and authentic local experiences</li><li>Coverage of heritage sites, national parks, and cultural destinations</li><li>All-inclusive packages with meals and activities</li></ul>'
+    },
+    'international': {
+      title: 'International Tours',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+      tag: '',
+      description: 'Curated international packages to the world\'s most breathtaking destinations. From European charm to exotic Asian landscapes.',
+      features: '<ul><li>Visa assistance and travel documentation support</li><li>Multi-country tours with expert itineraries</li><li>Luxury and budget-friendly options available</li><li>Travel insurance and 24/7 support</li><li>Exclusive deals and group discounts</li></ul>'
+    },
+    'heritage': {
+      title: 'Heritage Tours',
+      image: 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80',
+      tag: 'Specialty',
+      description: 'Immerse yourself in India\'s timeless heritage, architecture, and culture. Explore ancient temples, forts, and historical landmarks.',
+      features: '<ul><li>Expert heritage guides and historians</li><li>Access to UNESCO World Heritage Sites</li><li>Deep dives into Indian architecture and culture</li><li>Photography-friendly itineraries</li><li>Evening cultural performances and local cuisine</li></ul>'
+    },
+    'pilgrimage': {
+      title: 'Pilgrimage Tours',
+      image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80',
+      tag: '',
+      description: 'Spiritual journeys to India\'s most sacred and revered destinations. Connect with your faith and explore holy sites.',
+      features: '<ul><li>Sacred shrine visits and rituals</li><li>Experienced spiritual guides</li><li>Comfortable pilgrim facilities</li><li>Meditation and yoga sessions included</li><li>All major pilgrimage routes covered</li></ul>'
+    },
+    'group': {
+      title: 'Group Tours',
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      tag: '',
+      description: 'Expertly organized group travel with seamless logistics and great camaraderie. Perfect for families, friends, and organizations.',
+      features: '<ul><li>Customized group itineraries</li><li>Professional tour coordinators</li><li>Group discounts and special rates</li><li>Team-building activities and excursions</li><li>Hassle-free logistics and coordination</li></ul>'
+    },
+    'corporate': {
+      title: 'Corporate Travel',
+      image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=600&q=80',
+      tag: '',
+      description: 'Professional corporate tours, team outings, and MICE travel solutions designed for your business needs.',
+      features: '<ul><li>Customized itineraries for corporate events</li><li>Team-building and retreat planning</li><li>Venue and accommodation management</li><li>Activity coordination and logistics</li><li>Post-event travel experiences</li></ul>'
+    },
+    'honeymoon': {
+      title: 'Honeymoon Packages',
+      image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80',
+      tag: '',
+      description: 'Romantic escapes crafted with love for the most special journey of your life. Create unforgettable memories together.',
+      features: '<ul><li>Romantic destinations and sunset experiences</li><li>Private accommodations and special setups</li><li>Couples spa and wellness packages</li><li>Candlelit dinners and special surprises</li><li>Photography sessions and personalized service</li></ul>'
+    },
+    'adventure': {
+      title: 'Adventure Tours',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.kLcKxl1DCR3jEi6TFf3HBwHaEO?rs=1&pid=ImgDetMain&o=7&rm=3',
+      tag: '',
+      description: 'Thrilling adventure tours for the bold and adventurous. Experience adrenaline-pumping activities in exotic locations.',
+      features: '<ul><li>Trekking and mountaineering expeditions</li><li>Water sports and adventure activities</li><li>Wildlife safari experiences</li><li>Professional adventure guides and safety equipment</li><li>Beginner to expert level options</li></ul>'
+    }
+  };
+
+  function openServiceModal(serviceKey) {
+    const service = serviceDetails[serviceKey];
+    if (!service) return;
+    
+    const modal = document.getElementById('serviceModal');
+    document.getElementById('modalImage').src = service.image;
+    document.getElementById('modalTitle').textContent = service.title;
+    document.getElementById('modalDescription').textContent = service.description;
+    document.getElementById('modalFeatures').innerHTML = service.features;
+    
+    const tagEl = document.getElementById('modalTag');
+    if (service.tag) {
+      tagEl.textContent = service.tag;
+      tagEl.style.display = 'inline-block';
+    } else {
+      tagEl.style.display = 'none';
+    }
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeServiceModal() {
+    const modal = document.getElementById('serviceModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('serviceModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeServiceModal();
+    }
+  });
+
+  // Hero slideshow
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function goSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    goSlide(next);
+  }, 5000);
+
+  // Sticky header
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Form submit
+  function submitForm(e, successId) {
+    e.preventDefault();
+    const el = document.getElementById(successId);
+    el.style.display = 'block';
+    e.target.reset();
+    setTimeout(() => { el.style.display = 'none'; }, 5000);
+  }
+
+  // Animate on scroll (simple observer)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.why-card, .pkg-card, .testi-card, .trust-card, .vehicle-card, .service-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    observer.observe(el);
+  });
+
+  const defaultPackageInclusions = [
+    'Accommodation as per selected package category',
+    'Daily breakfast at the hotel',
+    'Comfortable vehicle for transfers and sightseeing',
+    'Sightseeing as mentioned in the itinerary',
+    'Travel planning assistance from RNS Tours & Travels'
+  ];
+
+  const defaultPackageExclusions = [
+    'Flight, train, or bus tickets unless specifically mentioned',
+    'Lunch, dinner, snacks, and personal expenses',
+    'Entry tickets, guide charges, permits, and activity fees unless mentioned',
+    'Travel insurance, visa charges, and government taxes if applicable',
+    'Anything not mentioned under inclusions'
+  ];
+
+  const domesticPackageInclusions = [
+    'Accommodation as per selected package category',
+    'Daily breakfast at the hotel',
+    'Private vehicle for transfers and sightseeing',
+    'Driver allowance, tolls, parking, and interstate permits as applicable',
+    'Travel planning assistance from RNS Tours & Travels'
+  ];
+
+  const pilgrimagePackageInclusions = [
+    'Accommodation as per selected package category',
+    'Daily breakfast at the hotel',
+    'Private vehicle for temple transfers and sightseeing',
+    'Darshan route guidance and travel coordination',
+    'Travel planning assistance from RNS Tours & Travels'
+  ];
+
+  const internationalPackageExclusions = [
+    'International airfare unless specifically mentioned',
+    'Visa charges, travel insurance, and forex expenses',
+    'Lunch, dinner, snacks, and personal expenses',
+    'Entry tickets, guide charges, optional tours, and activity fees unless mentioned',
+    'Anything not mentioned under inclusions'
+  ];
+
+  const internationalPackageKeys = new Set(['dubai', 'singapore', 'thailand', 'malaysia', 'bali', 'maldives', 'srilanka', 'bhutan', 'vietnam', 'nepal', 'cruise-tour', 'singapore-family']);
+  const domesticPackageKeys = new Set(['karnataka', 'kerala', 'tamilnadu', 'rajasthan', 'golden-triangle', 'odisha-golden-triangle', 'goa', 'kashmir', 'himachal', 'andaman', 'lakshadweep', 'leh-ladakh', 'north-east-seven-sisters', 'kerela-family', 'rajasthan-family']);
+  const pilgrimagePackageKeys = new Set(['tirupati', 'shirdi', 'varanasi', 'mahakal-omkar-maheshwar', 'char-dham', 'vaishno-devi']);
+
+  const specialPackageInclusions = {
+    'odisha-golden-triangle': [
+      'Breakfast during the tour',
+      '3/4/5 star accommodation as selected',
+      'Private vehicle option: sedan, Innova Crysta, Tempo Traveller, or Urbania',
+      'Puri, Konark, Bhubaneswar, Raghurajpur, Chilika, and Pipli sightseeing',
+      'Travel planning assistance from RNS Tours & Travels'
+    ],
+    'mahakal-omkar-maheshwar': [
+      'Breakfast during the tour',
+      '3 star accommodation',
+      'Private vehicle option: sedan, Innova Crysta, or Tempo Traveller',
+      'Ujjain, Omkareshwar, and Maheshwar sightseeing',
+      'Assistance for Bhasma Aarti tickets at Ujjain, subject to availability'
+    ]
+  };
+
+  function getPackageInclusions(packageKey, pkg) {
+    if (specialPackageInclusions[packageKey]) return specialPackageInclusions[packageKey];
+    if (pkg.inclusions) return pkg.inclusions;
+    if (pilgrimagePackageKeys.has(packageKey)) return pilgrimagePackageInclusions;
+    if (domesticPackageKeys.has(packageKey)) return domesticPackageInclusions;
+    return defaultPackageInclusions;
+  }
+
+  function getPackageExclusions(packageKey, pkg) {
+    if (pkg.exclusions) return pkg.exclusions;
+    if (internationalPackageKeys.has(packageKey)) return internationalPackageExclusions;
+    return defaultPackageExclusions;
+  }
+
+  // Package Modal Data
+  const packageData = {
+    'karnataka': {
+      title: 'Karnataka Heritage Tour',
+      badge: 'Karnataka',
+      days: '7 Days',
+      location: 'Karnataka, India',
+      description: 'Explore the majestic Hoysala temples, Hampi ruins, Mysore Palace, and the stunning Coorg landscapes. This tour takes you through Karnataka\'s rich heritage, ancient architecture, and natural beauty.',
+      tags: ['Heritage', 'Guided', 'Cultural'],
+      itinerary: [
+        { day: 1, title: 'Arrival & Bengaluru Exploration', activities: ['Arrive at Bengaluru', 'Hotel check-in & rest', 'Evening visit to Vidhana Soudha & Cubbon Park', 'Dinner at traditional Karnataka restaurant'] },
+        { day: 2, title: 'Mysore - Royal City', activities: ['Drive to Mysore (3 hours)', 'Visit Mysore Palace & gardens', 'Explore Chamundi Temple on the hilltop', 'Walk through local markets'] },
+        { day: 3, title: 'Hampi - Ancient Ruins', activities: ['Drive to Hampi (4 hours)', 'Visit Virupaksha Temple complex', 'Explore ancient market street & stone chariot', 'Sunset view from hilltop temples'] },
+        { day: 4, title: 'Hampi Continuation', activities: ['Krishna Temple & royal enclosure', 'Vittala Temple complex', 'Visit local museums', 'Evening boat ride on Tungabhadra River'] },
+        { day: 5, title: 'Coorg - Nature Paradise', activities: ['Drive to Coorg (5 hours)', 'Check-in to plantation resort', 'Coffee plantation tour', 'Trek through spice gardens & waterfalls'] },
+        { day: 6, title: 'Coorg Nature Activities', activities: ['Visit Abbey Falls & Iruppu Falls', 'Explore Nagarhole National Park', 'Wildlife spotting opportunities', 'Interact with local tribes'] },
+        { day: 7, title: 'Return Journey', activities: ['Drive back to Bengaluru', 'Shopping at local markets', 'Dinner & departure', 'Take home memories of the journey'] }
+      ]
+    },
+    'kerala': {
+      title: 'Kerala Backwaters Tour',
+      badge: 'Kerala',
+      days: '6 Days',
+      location: 'Kerala, India',
+      description: 'Cruise the serene backwaters, explore tea estates, pristine beaches, and the lush Western Ghats. Experience the tranquility of nature, luxury houseboat stays, and the vibrant culture of God\'s Own Country.',
+      tags: ['Nature', 'Houseboat', 'Leisure'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Kochi', activities: ['Arrive at Kochi airport', 'Hotel check-in', 'Visit Chinese Fishing Nets at sunset', 'Evening walk in Fort Kochi with colonial architecture'] },
+        { day: 2, title: 'Kochi & Munnar Journey', activities: ['Explore Dutch Palace & Jewish Synagogue', 'Spice market tour', 'Drive to Munnar (4 hours)', 'Check-in at tea estate resort'] },
+        { day: 3, title: 'Munnar Tea Plantations', activities: ['Tea estate trekking', 'Tea factory tour & tasting', 'Visit Eravikulam National Park', 'See Neelakurinji flowers (seasonal)'] },
+        { day: 4, title: 'Backwaters Houseboat', activities: ['Drive to Alleppey backwaters (2.5 hours)', 'Board luxury houseboat', 'Cruise through serene backwaters', 'Village exploration & local cooking demonstration'] },
+        { day: 5, title: 'Beach & Lagoons', activities: ['Early morning houseboat cruise', 'Visit fishing villages', 'Explore coconut groves & lagoons', 'Beach walk & sunset dinner on boat'] },
+        { day: 6, title: 'Departure', activities: ['Final houseboat breakfast', 'Shopping for local crafts & spices', 'Transfer to airport', 'Depart with unforgettable memories'] }
+      ]
+    },
+    'tamilnadu': {
+      title: 'Tamil Nadu Temple Tour',
+      badge: 'Tamil Nadu',
+      days: '8 Days',
+      location: 'Tamil Nadu, India',
+      description: 'Discover the grandeur of Dravidian temples, the shore temples of Mahabalipuram, and the magnificent Meenakshi Temple. This journey explores Tamil Nadu\'s timeless pilgrimage sites and architectural marvels.',
+      tags: ['Pilgrimage', 'Culture', 'Heritage'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Chennai', activities: ['Arrive at Chennai airport', 'Hotel check-in & rest', 'Visit Kapaleeshwarar Temple', 'Evening visit to Marina Beach'] },
+        { day: 2, title: 'Mahabalipuram Temples', activities: ['Drive to Mahabalipuram (1.5 hours)', 'Visit Shore Temples & Rock Carvings', 'Explore Five Rathas (Stone Chariots)', 'Beach time & sunset'] },
+        { day: 3, title: 'Tirupati Journey', activities: ['Drive to Tirupati (2.5 hours)', 'Visit Sri Venkateswara Temple on hilltop', 'Witness the temple architecture & rituals', 'Scenic cable car experience'] },
+        { day: 4, title: 'Tirupati Exploration', activities: ['Early morning temple darshan', 'Visit Chandragiri Fort nearby', 'Explore local temples & gardens', 'Shopping at temple bazaar'] },
+        { day: 5, title: 'Madurai - Temple City', activities: ['Drive to Madurai (3 hours)', 'Visit Meenakshi Amman Temple (ancient marvel)', 'Explore intricate temple sculptures', 'Evening Aarti ceremony'] },
+        { day: 6, title: 'Madurai Culture', activities: ['Thanjavur travel (2.5 hours)', 'Visit Brihadeeswarar Temple (UNESCO site)', 'Explore palace & art galleries', 'Watch classical Bharatanatyam dance'] },
+        { day: 7, title: 'Chidambaram Temple', activities: ['Drive to Chidambaram (2 hours)', 'Visit Nataraja Temple with Golden Gopuram', 'Experience sacred rituals', 'Explore temple sanctum & structures'] },
+        { day: 8, title: 'Return Journey', activities: ['Drive back to Chennai', 'Final shopping & souvenirs', 'Dinner & departure', 'Farewell dinner at traditional restaurant'] }
+      ]
+    },
+    'rajasthan': {
+      title: 'Rajasthan Heritage Tour',
+      badge: 'Rajasthan',
+      days: '10 Days',
+      location: 'Rajasthan, India',
+      description: 'Explore the royal forts of Jaipur, Jodhpur\'s blue city, the romantic lakes of Udaipur, and the Thar Desert. Experience Rajasthan\'s regal heritage, vibrant culture, and breathtaking landscapes.',
+      tags: ['Heritage', 'Royal', 'Adventure'],
+      itinerary: [
+        { day: 1, title: 'Jaipur Arrival', activities: ['Arrive in Jaipur', 'Hotel check-in', 'Visit Pink City & Hawa Mahal', 'City Palace exploration'] },
+        { day: 2, title: 'Jaipur Sightseeing', activities: ['Jantar Mantar Observatory tour', 'Visit temples & local markets', 'Elephant ride at Amber Fort', 'Sunset from Nahargarh Fort'] },
+        { day: 3, title: 'Jodhpur - Blue City', activities: ['Drive to Jodhpur (5 hours)', 'Visit Mehrangarh Fort (colossal structure)', 'Explore blue-painted city streets', 'Visit Clock Tower & local bazaar'] },
+        { day: 4, title: 'Jodhpur Continued', activities: ['Visit Jaswant Thada cenotaph', 'Explore Mandore Gardens', 'Camel safari in Thar Desert', 'Evening folk music & dance'] },
+        { day: 5, title: 'Udaipur - City of Lakes', activities: ['Drive to Udaipur (5 hours)', 'City Palace on lakeside', 'Boat ride on Lake Pichola', 'Sunset from Jagmandir Island'] },
+        { day: 6, title: 'Udaipur Heritage', activities: ['Visit Saheliyon ki Bari gardens', 'Explore Bhartiya Lok Kala Museum', 'Local artisan workshops', 'Dinner at lakeside restaurant'] },
+        { day: 7, title: 'Mount Abu', activities: ['Drive to Mount Abu (3.5 hours)', 'Visit Dilwara Jain Temples (intricate marble work)', 'Explore Guru Shikhar peak', 'Sunset point views'] },
+        { day: 8, title: 'Return to Jodhpur', activities: ['Drive back to Jodhpur (5 hours)', 'Visit local museums', 'Shopping at desert bazaar', 'Cultural evening programs'] },
+        { day: 9, title: 'Khimsar & Heritage', activities: ['Visit heritage hotels & palaces', 'Explore traditional Rajasthani villages', 'Participate in folk activities', 'Traditional Rajasthani dinner'] },
+        { day: 10, title: 'Departure', activities: ['Drive to Jaipur (5 hours)', 'Final shopping & souvenirs', 'Dinner & transfer to airport', 'Depart with royal memories'] }
+      ]
+    },
+    'golden-triangle': {
+      title: 'Golden Triangle Tour',
+      badge: 'Golden Triangle',
+      days: '6 Days',
+      location: 'Delhi, Agra, Jaipur, India',
+      description: 'The iconic Delhi–Agra–Jaipur circuit encompassing India\'s most celebrated heritage and the Taj Mahal. Visit UNESCO World Heritage Sites and experience the essence of India\'s rich history.',
+      tags: ['UNESCO', 'Classic', 'Heritage'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Delhi', activities: ['Arrive at Delhi airport', 'Hotel check-in & rest', 'Visit Red Fort & Jama Masjid', 'Evening at Connaught Place & India Gate'] },
+        { day: 2, title: 'Delhi Sightseeing', activities: ['Raj Ghat & Gandhi Memorial', 'Qutub Minar (12th century monument)', 'Humayun\'s Tomb & Lodhi Gardens', 'Dinner at traditional restaurant'] },
+        { day: 3, title: 'Agra - Taj Mahal', activities: ['Drive to Agra (3.5 hours)', 'Visit Taj Mahal at sunrise', 'Visit Agra Fort', 'Explore marble inlay workshops'] },
+        { day: 4, title: 'Agra & Baby Taj', activities: ['Visit Mehtab Bagh for Taj Mahal views', 'Explore Baby Taj (Itimad-ud-Daulah)', 'Shop at local bazaars', 'Sunset boat ride on Yamuna River'] },
+        { day: 5, title: 'Jaipur - Pink City', activities: ['Drive to Jaipur (3.5 hours)', 'Hawa Mahal photo session', 'City Palace & Jantar Mantar', 'Local market exploration'] },
+        { day: 6, title: 'Departure', activities: ['Amber Fort visit', 'Shopping at local crafts market', 'Nahargarh Fort sunset', 'Drive back to Delhi airport for departure'] }
+      ]
+    },
+    'odisha-golden-triangle': {
+      title: 'Odisha Golden Triangle Tour',
+      badge: 'Odisha',
+      days: '3 Nights / 4 Days',
+      location: 'Puri, Konark, Bhubaneswar, Odisha',
+      description: 'A compact Odisha circuit covering Puri, Konark, Bhubaneswar, Raghurajpur, Chilika Lake, and Pipli. Includes breakfast, comfortable 3/4/5 star accommodation options, and private vehicle choices such as sedan, Innova Crysta, Tempo Traveller, or Urbania.',
+      tags: ['Temple', 'Culture', 'Breakfast'],
+      itinerary: [
+        { day: 1, title: 'Bhubaneswar Arrival', activities: ['Arrive in Bhubaneswar', 'Hotel check-in and refreshment', 'Visit Lingaraj Temple and Mukteshwar Temple', 'Explore local markets and evening leisure'] },
+        { day: 2, title: 'Konark and Puri', activities: ['Drive to Konark Sun Temple', 'Visit Chandrabhaga Beach', 'Continue to Puri', 'Evening darshan at Jagannath Temple and beach visit'] },
+        { day: 3, title: 'Chilika and Raghurajpur', activities: ['Excursion to Chilika Lake', 'Boat ride at Satapada subject to conditions', 'Visit Raghurajpur heritage crafts village', 'Return to Puri for overnight stay'] },
+        { day: 4, title: 'Pipli and Departure', activities: ['Visit Pipli applique craft village', 'Drive back to Bhubaneswar', 'Last minute shopping or temple visit', 'Airport or railway station drop'] }
+      ]
+    },
+    'goa': {
+      title: 'Goa Holiday Tour',
+      badge: 'Goa',
+      days: '5 Days',
+      location: 'Goa, India',
+      description: 'Sun, sand, and sea — experience Goa\'s vibrant beaches, colonial heritage, and legendary nightlife. Enjoy water sports, explore Portuguese architecture, and relax on pristine shorelines.',
+      tags: ['Beach', 'Leisure', 'Cultural'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Goa', activities: ['Arrive at Dabolim airport', 'Hotel check-in in North Goa', 'Beach walk & sunset', 'Dinner at beach shack restaurant'] },
+        { day: 2, title: 'Beaches & Water Sports', activities: ['Baga Beach visit', 'Try parasailing & jet skiing', 'Visit Calangute Beach', 'Evening at Anjuna Flea Market'] },
+        { day: 3, title: 'Heritage & Culture', activities: ['Visit Basilica of Bom Jesus (UNESCO site)', 'Explore St. Cathedral', 'Fontainhas neighborhood walk', 'Spice plantation tour'] },
+        { day: 4, title: 'South Goa Exploration', activities: ['Drive to South Goa', 'Visit Palolem Beach', 'Explore Colva Beach & fishing village', 'Dolphin spotting cruise'] },
+        { day: 5, title: 'Departure', activities: ['Final beach time & swimming', 'Shopping at night markets', 'Goan cuisine lunch', 'Transfer to airport for departure'] }
+      ]
+    },
+    'kashmir': {
+      title: 'Kashmir Experience',
+      badge: 'Kashmir',
+      days: '7 Days',
+      location: 'Kashmir Valley, India',
+      description: 'Float on the iconic Dal Lake, explore the Mughal Gardens, and soak in the unmatched beauty of the Valley. Discover this paradise on earth with stunning alpine scenery and serene surroundings.',
+      tags: ['Paradise', 'Scenic', 'Adventure'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Srinagar', activities: ['Arrive at Srinagar airport', 'Houseboat check-in on Dal Lake', 'Sunset shikara (boat) ride', 'Evening walk in old city'] },
+        { day: 2, title: 'Dal Lake & Gardens', activities: ['Early morning shikhara ride with sunrise', 'Visit Mughal Gardens (Nishat & Shalimar)', 'Floating market exploration', 'Visit Jama Masjid & historic sites'] },
+        { day: 3, title: 'Gulmarg Adventure', activities: ['Drive to Gulmarg (1.5 hours)', 'Gondola ride to Apharwat peak', 'Pine forest walks & meadow exploration', 'Adventure activities (skiing in season)'] },
+        { day: 4, title: 'Pahalgam Valley', activities: ['Drive to Pahalgam (2 hours)', 'Visit Chandanwari meadows', 'Explore Betaab Valley', 'Aru Valley trek & waterfall visit'] },
+        { day: 5, title: 'Sonamarg Excursion', activities: ['Drive to Sonamarg (1.5 hours)', 'Meadow walks & photography', 'Visit Thajiwas Glacier', 'Local shepherd villages interaction'] },
+        { day: 6, title: 'Return to Srinagar', activities: ['Back to houseboat on Dal Lake', 'Visit Shankaracharya Temple on hilltop', 'Evening shopping at local bazaar', 'Traditional Wazwan dinner'] },
+        { day: 7, title: 'Departure', activities: ['Final market shopping', 'Breakfast on houseboat', 'Departure flight', 'Take memories of paradise'] }
+      ]
+    },
+    'himachal': {
+      title: 'Himachal Adventure',
+      badge: 'Himachal',
+      days: '8 Days',
+      location: 'Himachal Pradesh, India',
+      description: 'Discover Shimla\'s colonial charm, Manali\'s snow peaks, Kullu\'s valleys, and thrilling mountain adventures. Experience adventure activities, stunning mountain landscapes, and warm hospitality.',
+      tags: ['Adventure', 'Mountains', 'Nature'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Shimla', activities: ['Arrive at Shimla', 'Hotel check-in', 'Visit The Ridge & Kali Bari Temple', 'Mall Road shopping & dining'] },
+        { day: 2, title: 'Shimla Heritage', activities: ['Viceregal Lodge tour (colonial architecture)', 'Chail Palace visit', 'Jakhu Temple trek with monkey encounters', 'Sunset from panoramic points'] },
+        { day: 3, title: 'Manali Journey', activities: ['Drive to Manali (6.5 hours)', 'Hotel check-in', 'Visit Hadimba Temple & nearby areas', 'Mall Street exploration'] },
+        { day: 4, title: 'Manali Adventure', activities: ['Rohtang Pass trek (3026m high)', 'Snow activities (seasonal)', 'Visit Solang Valley for paragliding', 'Hot spring visit at Vashisht'] },
+        { day: 5, title: 'Kullu Valley', activities: ['Drive to Kullu (1.5 hours)', 'Visit Ragunath Temple & Great Shiva Statue', 'Explore apple orchards & local markets', 'White water rafting in Beas River'] },
+        { day: 6, title: 'Kasol & Parvati Valley', activities: ['Drive to Kasol (mountain village)', 'Trek to Kheerganga hot springs', 'Explore Israeli-influenced cafes', 'Nature photography opportunities'] },
+        { day: 7, title: 'Manikaran & Return', activities: ['Visit Manikaran Sahib Gurudwara', 'Hot water springs dip', 'Return to Manali', 'Adventure sports or relaxation'] },
+        { day: 8, title: 'Departure', activities: ['Drive back to Shimla', 'Final shopping & souvenirs', 'Dinner & flight departure', 'Take memories of mountains'] }
+      ]
+    },
+    'andaman': {
+      title: 'Andaman Island Escape',
+      badge: 'Andaman',
+      days: '6 Days',
+      location: 'Port Blair, Havelock, Neil Island',
+      description: 'A tropical island holiday covering Port Blair, Havelock, Neil Island, Cellular Jail, beaches, ferries, and relaxed sea-side experiences. Perfect for families, couples, and beach lovers.',
+      tags: ['Beach', 'Island', 'Leisure'],
+      itinerary: [
+        { day: 1, title: 'Port Blair Arrival', activities: ['Arrive at Port Blair', 'Hotel check-in', 'Visit Cellular Jail', 'Attend Light and Sound Show'] },
+        { day: 2, title: 'Havelock Island', activities: ['Ferry to Havelock Island', 'Check-in at beach resort', 'Visit Radhanagar Beach', 'Sunset beach time'] },
+        { day: 3, title: 'Elephant Beach', activities: ['Visit Elephant Beach', 'Snorkeling or sea walk optional', 'Beach relaxation', 'Return to Havelock stay'] },
+        { day: 4, title: 'Neil Island', activities: ['Ferry to Neil Island', 'Visit Bharatpur Beach', 'Natural Bridge sightseeing', 'Laxmanpur Beach sunset'] },
+        { day: 5, title: 'Return to Port Blair', activities: ['Ferry back to Port Blair', 'Visit local museums or Corbyn Cove', 'Shopping for souvenirs', 'Leisure evening'] },
+        { day: 6, title: 'Departure', activities: ['Breakfast at hotel', 'Airport transfer', 'Depart with island memories'] }
+      ]
+    },
+    'lakshadweep': {
+      title: 'Lakshadweep Lagoon Holiday',
+      badge: 'Lakshadweep',
+      days: '5 Days',
+      location: 'Lakshadweep Islands, India',
+      description: 'A quiet island holiday with turquoise lagoons, beaches, snorkeling, and relaxed resort-style stays. Ideal for travelers seeking a peaceful tropical escape within India.',
+      tags: ['Lagoon', 'Snorkeling', 'Beach'],
+      itinerary: [
+        { day: 1, title: 'Arrival and Island Transfer', activities: ['Arrive at gateway city or island entry point', 'Complete permit and transfer formalities', 'Check-in at island accommodation', 'Evening beach walk'] },
+        { day: 2, title: 'Lagoon Activities', activities: ['Breakfast at stay', 'Lagoon swimming', 'Snorkeling session optional', 'Sunset by the beach'] },
+        { day: 3, title: 'Island Exploration', activities: ['Local island walk', 'Visit beaches and viewpoints', 'Water sports subject to availability', 'Relaxed evening'] },
+        { day: 4, title: 'Leisure Day', activities: ['Free time for beach relaxation', 'Optional kayaking or glass-bottom boat ride', 'Photography and souvenir time', 'Farewell dinner'] },
+        { day: 5, title: 'Departure', activities: ['Breakfast and check-out', 'Transfer to departure point', 'Return journey'] }
+      ]
+    },
+    'leh-ladakh': {
+      title: 'Leh Ladakh Adventure',
+      badge: 'Ladakh',
+      days: '7 Days',
+      location: 'Leh, Nubra Valley, Pangong Lake',
+      description: 'A high-altitude Himalayan journey through Leh, monasteries, Nubra Valley, Khardung La, Pangong Lake, and unforgettable mountain landscapes.',
+      tags: ['Adventure', 'Himalayan', 'Scenic'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Leh', activities: ['Arrive at Leh airport', 'Hotel check-in', 'Acclimatization rest', 'Leh market evening walk'] },
+        { day: 2, title: 'Leh Local Sightseeing', activities: ['Visit Shanti Stupa', 'Leh Palace', 'Hall of Fame', 'Magnetic Hill and Gurudwara Pathar Sahib'] },
+        { day: 3, title: 'Nubra Valley', activities: ['Drive via Khardung La Pass', 'Reach Nubra Valley', 'Visit Diskit Monastery', 'Hunder sand dunes and camel ride optional'] },
+        { day: 4, title: 'Nubra Exploration', activities: ['Explore Turtuk or local villages subject to route', 'Scenic valley photography', 'Return to Nubra stay', 'Leisure evening'] },
+        { day: 5, title: 'Pangong Lake', activities: ['Drive to Pangong Lake', 'Lake-side photography', 'Relax near the blue waters', 'Overnight stay near Pangong or return route'] },
+        { day: 6, title: 'Return to Leh', activities: ['Drive back to Leh', 'Visit monasteries en route if time permits', 'Shopping at Leh market', 'Farewell dinner'] },
+        { day: 7, title: 'Departure', activities: ['Breakfast at hotel', 'Airport transfer', 'Depart from Leh'] }
+      ]
+    },
+    'north-east-seven-sisters': {
+      title: 'North East & Seven Sisters Tour',
+      badge: 'North East',
+      days: '8 Days',
+      location: 'Assam, Meghalaya, Arunachal Pradesh, India',
+      description: 'A scenic North East India journey through Assam, Meghalaya, and Arunachal highlights. Explore Guwahati, Kaziranga, Shillong, Cherrapunji, waterfalls, caves, living root bridges, monasteries, and local culture.',
+      tags: ['Scenic', 'Culture', 'Wildlife'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Guwahati', activities: ['Arrive in Guwahati', 'Hotel check-in', 'Visit Kamakhya Temple', 'Evening Brahmaputra river cruise optional'] },
+        { day: 2, title: 'Kaziranga National Park', activities: ['Drive to Kaziranga', 'Check-in near the park', 'Tea garden visit en route', 'Evening leisure and local dinner'] },
+        { day: 3, title: 'Kaziranga Safari', activities: ['Early morning jeep safari subject to park schedule', 'Spot rhinos and wildlife', 'Visit local craft centers', 'Return to stay for rest'] },
+        { day: 4, title: 'Shillong Journey', activities: ['Drive to Shillong', 'Visit Umiam Lake', 'Explore Police Bazaar', 'Overnight stay in Shillong'] },
+        { day: 5, title: 'Cherrapunji Excursion', activities: ['Visit Nohkalikai Falls', 'Explore Mawsmai Cave', 'See Seven Sisters Falls viewpoint', 'Return to Shillong'] },
+        { day: 6, title: 'Dawki and Mawlynnong', activities: ['Drive to Dawki river', 'Visit Mawlynnong village', 'Living root bridge walk', 'Return to Shillong'] },
+        { day: 7, title: 'Arunachal Highlights', activities: ['Scenic drive toward Arunachal gateway or local monastery route as planned', 'Visit monasteries and viewpoints', 'Cultural stops and photography', 'Return stay as per route'] },
+        { day: 8, title: 'Departure', activities: ['Breakfast and check-out', 'Drive back to Guwahati', 'Souvenir shopping if time permits', 'Airport or railway station drop'] }
+      ]
+    },
+    'dubai': {
+      title: 'Dubai Experience',
+      badge: 'Dubai',
+      days: '5 Days',
+      location: 'Dubai, UAE',
+      description: 'Burj Khalifa, desert safari, gold souks, and the world\'s most spectacular skyline await you. Experience luxury shopping, thrilling desert adventures, and iconic modern architecture.',
+      tags: ['Luxury', 'Shopping', 'Adventure'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Dubai', activities: ['Arrive at Dubai airport', 'Hotel check-in', 'Visit Dubai Mall & Burj Khalifa base', 'Dinner at beachfront restaurant'] },
+        { day: 2, title: 'City Exploration', activities: ['Burj Khalifa at-the-top visit', 'Dubai Fountain show', 'Palm Jumeirah helicopter tour', 'Gold Souk shopping experience'] },
+        { day: 3, title: 'Desert Safari', activities: ['Desert safari with dune bashing', 'Camel riding experience', 'Traditional Bedouin camp dinner', 'Belly dance performance'] },
+        { day: 4, title: 'Beach & Water Sports', activities: ['Jet ski riding at Jumeirah Beach', 'Parasailing experience', 'Underwater tunnel at Aquarium', 'Dubai Marina yacht cruise'] },
+        { day: 5, title: 'Departure', activities: ['Final shopping at malls', 'Spa relaxation', 'Dinner at rooftop restaurant', 'Transfer to airport'] }
+      ]
+    },
+    'singapore': {
+      title: 'Singapore Discovery',
+      badge: 'Singapore',
+      days: '6 Days',
+      location: 'Singapore',
+      description: 'Gardens by the Bay, Universal Studios, Sentosa Island, and the iconic Marina Bay Sands. Experience Asia\'s most modern city with stunning attractions and incredible cuisine.',
+      tags: ['City', 'Family', 'Shopping'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Singapore', activities: ['Arrive at Changi airport', 'Hotel check-in at Marina area', 'Visit Marina Bay Sands shopping mall', 'Evening light show at Marina Bay'] },
+        { day: 2, title: 'Gardens & Landmarks', activities: ['Sunrise at Gardens by the Bay', 'Supertree Grove experience', 'Universal Studios Singapore full day', 'Dinner at hawker center'] },
+        { day: 3, title: 'Island Adventures', activities: ['Sentosa Island exploration', 'USS (Universal Studios Singapore)', 'Beach clubs and water sports', 'Cable car ride'] },
+        { day: 4, title: 'Cultural Singapore', activities: ['Singapore Zoo morning visit', 'Night Safari experience', 'Chinese Heritage Museum', 'Little India exploration'] },
+        { day: 5, title: 'Relaxation & Shopping', activities: ['Sentosa beach day', 'Orchard Road shopping', 'City sky dining', 'Spa treatment'] },
+        { day: 6, title: 'Departure', activities: ['Final shopping & souvenirs', 'Breakfast at hotel', 'Transfer to airport', 'Depart Singapore'] }
+      ]
+    },
+    'thailand': {
+      title: 'Thailand Highlights',
+      badge: 'Thailand',
+      days: '7 Days',
+      location: 'Thailand',
+      description: 'Bangkok temples, Phuket beaches, Chiang Mai culture, and incredible street food adventures. Experience Thailand\'s vibrant culture, spirituality, and warm hospitality.',
+      tags: ['Beach', 'Culture', 'Food'],
+      itinerary: [
+        { day: 1, title: 'Bangkok Arrival', activities: ['Arrive in Bangkok', 'Hotel check-in', 'Visit Wat Arun Temple', 'Dinner at riverside restaurant'] },
+        { day: 2, title: 'Bangkok Heritage', activities: ['Grand Palace & Emerald Buddha visit', 'Reclining Buddha at Wat Pho', 'Floating markets tour', 'Tuk-tuk ride through old city'] },
+        { day: 3, title: 'Travel to Phuket', activities: ['Flight to Phuket', 'Beach hotel check-in', 'Sunset at Patong Beach', 'Evening beach walk'] },
+        { day: 4, title: 'Phuket Beach Activities', activities: ['Island hopping cruise (Phi Phi islands)', 'Snorkeling at pristine reefs', 'Maya Beach exploration', 'Sunset dinner cruise'] },
+        { day: 5, title: 'Chiang Mai Journey', activities: ['Flight to Chiang Mai', 'Old City exploration', 'Night Bazaar shopping', 'Traditional Thai massage'] },
+        { day: 6, title: 'Chiang Mai Culture', activities: ['Elephant sanctuary visit', 'Monk blessing ceremony', 'Thai cooking class', 'Local market tour'] },
+        { day: 7, title: 'Departure', activities: ['Temple visits', 'Final souvenir shopping', 'Farewell dinner', 'Transfer to airport'] }
+      ]
+    },
+    'malaysia': {
+      title: 'Malaysia Escapade',
+      badge: 'Malaysia',
+      days: '6 Days',
+      location: 'Malaysia',
+      description: 'Kuala Lumpur\'s twin towers, Penang\'s street art, Langkawi beaches, and diverse cuisine. Explore Malaysia\'s multicultural charm, natural beauty, and warm hospitality.',
+      tags: ['City', 'Nature', 'Culture'],
+      itinerary: [
+        { day: 1, title: 'Kuala Lumpur Arrival', activities: ['Arrive in Kuala Lumpur', 'Hotel check-in', 'Visit Petronas Twin Towers', 'KLCC shopping mall exploration'] },
+        { day: 2, title: 'KL City Tour', activities: ['Batu Caves Temple visit', 'Lost World of Tambun adventure park', 'Menara KL Tower climbing', 'Chinatown street food tour'] },
+        { day: 3, title: 'Penang Journey', activities: ['Flight to Penang', 'Georgetown UNESCO heritage walk', 'Street art photography tour', 'Local food specialties tasting'] },
+        { day: 4, title: 'Penang Beaches', activities: ['Batu Ferringhi Beach visit', 'Entopia Butterfly Park', 'Penang Hill cable car ride', 'Sunset at temple'] },
+        { day: 5, title: 'Langkawi Island', activities: ['Flight to Langkawi', 'Beach relaxation at Pantai Cenang', 'Sky Bridge walk at Gua Kelam', 'Island hopping tour'] },
+        { day: 6, title: 'Departure', activities: ['Final beach time', 'Souvenir shopping', 'Langkawi duty-free shopping', 'Transfer to airport'] }
+      ]
+    },
+    'bali': {
+      title: 'Bali Paradise',
+      badge: 'Bali',
+      days: '7 Days',
+      location: 'Bali, Indonesia',
+      description: 'Ubud\'s terraced rice fields, pristine beaches, ancient Hindu temples, and world-class spas. Experience Bali\'s spiritual essence, cultural richness, and tropical beauty.',
+      tags: ['Romance', 'Wellness', 'Culture'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Bali', activities: ['Arrive at Denpasar airport', 'Resort check-in in Ubud', 'Ubud town exploration', 'Traditional Balinese dinner'] },
+        { day: 2, title: 'Ubud Culture', activities: ['Rice terrace trek at Tegallalang', 'Ubud Monkey Forest visit', 'Traditional dance performance', 'Art market shopping'] },
+        { day: 3, title: 'Spiritual Bali', activities: ['Besakih Temple visit', 'Mount Batur sunrise trek', 'Sacred spring water temple visit', 'Balinese cooking class'] },
+        { day: 4, title: 'Beach Relaxation', activities: ['Move to beach resort (Seminyak)', 'Beach day with water sports', 'Sunset worship at temple', 'Beach club dinner'] },
+        { day: 5, title: 'Wellness Day', activities: ['Spa treatments and massages', 'Yoga class at beach', 'Local wellness center visit', 'Healthy cuisine lunch'] },
+        { day: 6, title: 'Beach Adventures', activities: ['Surfing lessons', 'Snorkeling trip', 'Island exploring', 'Beach bonfire dinner'] },
+        { day: 7, title: 'Departure', activities: ['Final beach walk', 'Souvenir shopping', 'Balinese crafts market', 'Transfer to airport'] }
+      ]
+    },
+    'maldives': {
+      title: 'Maldives Luxury',
+      badge: 'Maldives',
+      days: '5 Days',
+      location: 'Maldives',
+      description: 'Overwater bungalows, crystal-clear lagoons, world-class diving, and breathtaking sunsets. Experience ultimate tropical luxury in the Indian Ocean\'s paradise.',
+      tags: ['Honeymoon', 'Luxury', 'Beach'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Paradise', activities: ['Arrive at Male airport', 'Speedboat to resort', 'Water bungalow check-in', 'Welcome dinner on private deck'] },
+        { day: 2, title: 'Island Exploration', activities: ['Snorkeling at house reef', 'Island hopping tour', 'Local culture village visit', 'Sunset cocktail cruise'] },
+        { day: 3, title: 'Water Activities', activities: ['Scuba diving experience', 'Dolphin spotting tour', 'Water sports activities', 'Beach barbecue dinner'] },
+        { day: 4, title: 'Relaxation', activities: ['Spa treatment at water spa', 'Swimming & sunbathing', 'In-house dining', 'Moonlight beach walk'] },
+        { day: 5, title: 'Departure', activities: ['Final breakfast on deck', 'Water sports activities', 'Speedboat to airport', 'Depart paradise'] }
+      ]
+    },
+    'srilanka': {
+      title: 'Sri Lanka Wonders',
+      badge: 'Sri Lanka',
+      days: '7 Days',
+      location: 'Sri Lanka',
+      description: 'Sigiriya rock fortress, Kandy temples, tea-clad hills, and the pristine beaches of the Pearl of the Indian Ocean. Experience Sri Lanka\'s diverse attractions in one journey.',
+      tags: ['Heritage', 'Beach', 'Adventure'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Colombo', activities: ['Arrive at Colombo airport', 'City tour & colonial architecture', 'Independence Square visit', 'Local market exploration'] },
+        { day: 2, title: 'Sigiriya Rock', activities: ['Drive to Dambulla', 'Sigiriya rock fortress climb', 'Ancient cave temples', 'Village bicycle tour'] },
+        { day: 3, title: 'Kandy Temple', activities: ['Drive to Kandy', 'Temple of Tooth Relic visit', 'Kandy Lake walk', 'Traditional dance performance'] },
+        { day: 4, title: 'Tea Country', activities: ['Tea plantation tour', 'Tea factory visit & tasting', 'Mountain scenery drive', 'Local tea estate lunch'] },
+        { day: 5, title: 'Beach Journey', activities: ['Travel to Mirissa beach', 'Beach relaxation', 'Whale watching boat tour', 'Sunset beach dinner'] },
+        { day: 6, title: 'Beach Activities', activities: ['Snorkeling experience', 'Water sports & diving', 'Beach resort relaxation', 'Local seafood dinner'] },
+        { day: 7, title: 'Departure', activities: ['Final beach time', 'Souvenir shopping', 'Travel back to Colombo', 'Depart Sri Lanka'] }
+      ]
+    },
+    'bhutan': {
+      title: 'Bhutan Himalayan Journey',
+      badge: 'Bhutan',
+      days: '6 Days',
+      location: 'Thimphu, Punakha, Paro, Bhutan',
+      description: 'A peaceful Himalayan journey through Bhutan covering monasteries, dzongs, mountain passes, Paro valley, and the iconic Tiger\'s Nest hike. Ideal for travelers who want culture, nature, and a slower, spiritual travel pace.',
+      tags: ['Himalayan', 'Culture', 'Monastery'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Paro and Transfer to Thimphu', activities: ['Arrive at Paro airport', 'Scenic drive to Thimphu', 'Hotel check-in', 'Evening walk around Thimphu town'] },
+        { day: 2, title: 'Thimphu Sightseeing', activities: ['Visit Buddha Dordenma statue', 'Explore Memorial Chorten', 'Visit Tashichho Dzong', 'Browse local handicraft markets'] },
+        { day: 3, title: 'Punakha Valley', activities: ['Drive through Dochula Pass', 'Visit Punakha Dzong', 'Walk across the suspension bridge', 'Evening valley views and leisure'] },
+        { day: 4, title: 'Return to Paro', activities: ['Drive back to Paro', 'Visit Rinpung Dzong', 'Explore National Museum', 'Local cafe and market visit'] },
+        { day: 5, title: 'Tiger\'s Nest Monastery', activities: ['Hike to Taktsang Monastery', 'Photography stops along the trail', 'Lunch with Paro valley views', 'Farewell dinner'] },
+        { day: 6, title: 'Departure', activities: ['Breakfast at hotel', 'Souvenir shopping if time permits', 'Transfer to Paro airport', 'Depart Bhutan'] }
+      ]
+    },
+    'vietnam': {
+      title: 'Vietnam Highlights',
+      badge: 'Vietnam',
+      days: '7 Days',
+      location: 'Hanoi, Ha Long Bay, Da Nang, Hoi An, Ho Chi Minh City',
+      description: 'A vibrant Vietnam itinerary combining Hanoi culture, Ha Long Bay cruising, Da Nang beaches, Hoi An lantern streets, and Ho Chi Minh City history. A balanced mix of scenery, food, heritage, and city life.',
+      tags: ['Cruise', 'Culture', 'Food'],
+      itinerary: [
+        { day: 1, title: 'Hanoi Arrival', activities: ['Arrive in Hanoi', 'Hotel check-in', 'Old Quarter walk', 'Evening street food experience'] },
+        { day: 2, title: 'Hanoi City Tour', activities: ['Visit Ho Chi Minh Mausoleum area', 'Explore Temple of Literature', 'Hoan Kiem Lake walk', 'Water puppet show'] },
+        { day: 3, title: 'Ha Long Bay Cruise', activities: ['Drive to Ha Long Bay', 'Board scenic cruise', 'Cave visit or kayaking', 'Overnight cruise stay'] },
+        { day: 4, title: 'Da Nang Transfer', activities: ['Morning bay views and breakfast', 'Return to Hanoi', 'Fly to Da Nang', 'Beach evening and hotel check-in'] },
+        { day: 5, title: 'Hoi An Heritage', activities: ['Visit Marble Mountains', 'Explore Hoi An Ancient Town', 'Lantern market walk', 'Vietnamese cooking or basket boat experience'] },
+        { day: 6, title: 'Ho Chi Minh City', activities: ['Fly to Ho Chi Minh City', 'City orientation tour', 'Visit War Remnants Museum', 'Ben Thanh Market shopping'] },
+        { day: 7, title: 'Departure', activities: ['Cu Chi Tunnels optional visit', 'Final shopping', 'Airport transfer', 'Depart Vietnam'] }
+      ]
+    },
+    'nepal': {
+      title: 'Nepal Himalayan Tour',
+      badge: 'Nepal',
+      days: '6 Days',
+      location: 'Kathmandu, Pokhara, Nepal',
+      description: 'A scenic Himalayan journey covering Kathmandu temples, Pokhara lakes, mountain viewpoints, local markets, and gentle cultural exploration.',
+      tags: ['Himalayan', 'Culture', 'Scenic'],
+      itinerary: [
+        { day: 1, title: 'Kathmandu Arrival', activities: ['Arrive in Kathmandu', 'Hotel check-in', 'Evening at Thamel market', 'Welcome dinner'] },
+        { day: 2, title: 'Kathmandu Heritage', activities: ['Visit Pashupatinath Temple', 'Boudhanath Stupa', 'Swayambhunath Temple', 'Kathmandu Durbar Square'] },
+        { day: 3, title: 'Travel to Pokhara', activities: ['Scenic drive or flight to Pokhara', 'Hotel check-in', 'Phewa Lake visit', 'Lakeside market walk'] },
+        { day: 4, title: 'Pokhara Views', activities: ['Early morning Sarangkot sunrise', 'Visit Davis Falls', 'Gupteshwor Cave', 'Optional boating on Phewa Lake'] },
+        { day: 5, title: 'Return to Kathmandu', activities: ['Return to Kathmandu', 'Visit Patan or Bhaktapur if time permits', 'Souvenir shopping', 'Farewell dinner'] },
+        { day: 6, title: 'Departure', activities: ['Breakfast at hotel', 'Airport transfer', 'Depart Nepal'] }
+      ]
+    },
+    'cruise-tour': {
+      title: 'International Cruise Tour',
+      badge: 'Cruise',
+      days: '5 Days',
+      location: 'International Cruise Routes',
+      description: 'A relaxed cruise holiday with comfortable cabins, onboard dining, entertainment, sea views, and curated shore excursions based on the selected route.',
+      tags: ['Cruise', 'Leisure', 'Premium'],
+      itinerary: [
+        { day: 1, title: 'Embarkation', activities: ['Arrive at cruise terminal', 'Complete boarding formalities', 'Cabin check-in', 'Welcome dinner onboard'] },
+        { day: 2, title: 'At Sea', activities: ['Breakfast onboard', 'Enjoy ship facilities', 'Pool deck and entertainment', 'Evening show or live music'] },
+        { day: 3, title: 'Shore Excursion', activities: ['Arrive at port destination', 'Guided shore visit optional', 'Shopping or city walk', 'Return to cruise by evening'] },
+        { day: 4, title: 'Cruise Leisure', activities: ['Onboard activities', 'Spa or recreation optional', 'Fine dining experience', 'Farewell entertainment night'] },
+        { day: 5, title: 'Disembarkation', activities: ['Breakfast onboard', 'Complete check-out', 'Disembark at cruise terminal', 'Transfer assistance as planned'] }
+      ]
+    },
+    'kerela-family': {
+      title: 'Kerala Family Special',
+      badge: 'Kerala',
+      days: '7 Days',
+      location: 'Kerala, India',
+      description: 'Houseboats, wildlife, beaches — a perfect blend for all ages in God\'s Own Country. Family-friendly activities, comfortable stays, and memorable experiences.',
+      tags: ['All Ages', 'Nature', 'Family'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Kochi', activities: ['Arrive at Kochi', 'Family-friendly hotel check-in', 'Chinese Fishing Nets visit', 'Evening beach walk with kids'] },
+        { day: 2, title: 'Wildlife & Culture', activities: ['Periyar Wildlife Sanctuary jeep safari', 'Spice plantation tour (kids enjoy)', 'Traditional spice market', 'Family dinner at local restaurant'] },
+        { day: 3, title: 'Tea Country', activities: ['Drive to tea estates', 'Tea factory tour for kids', 'Tea tasting (juice for kids)', 'Scenic mountain drive'] },
+        { day: 4, title: 'Houseboat Adventure', activities: ['Check-in to family houseboat', 'Cruise through backwaters', 'Fish feeding activity', 'Traditional Kerala dinner on boat'] },
+        { day: 5, title: 'Beach Day', activities: ['Beach resort check-in', 'Beach activities for all ages', 'Water sports (age-appropriate)', 'Sunset beach picnic'] },
+        { day: 6, title: 'Final Exploration', activities: ['Fish market visit (interesting for kids)', 'Local market shopping', 'Beach games and fun', 'Family bonfire dinner'] },
+        { day: 7, title: 'Departure', activities: ['Final beach time', 'Souvenir shopping', 'Lunch at local restaurant', 'Transfer to airport'] }
+      ]
+    },
+    'singapore-family': {
+      title: 'Singapore Family Fun',
+      badge: 'Singapore',
+      days: '6 Days',
+      location: 'Singapore',
+      description: 'Universal Studios, Night Safari, and endless kid-friendly adventures in the Lion City. Perfect family vacation with attractions for all age groups.',
+      tags: ['Theme Parks', 'Fun', 'Family'],
+      itinerary: [
+        { day: 1, title: 'Arrival & Check-in', activities: ['Arrive in Singapore', 'Family hotel near attractions', 'Visit Singapore Zoo nearby', 'Family dinner at hawker center'] },
+        { day: 2, title: 'Theme Park Day', activities: ['Full day at Universal Studios Singapore', 'Rides suitable for all ages', 'Meet character meet-and-greets', 'Park dinner & shows'] },
+        { day: 3, title: 'Wildlife Night', activities: ['Night Safari experience', 'Tram ride through park', 'Animal observation', 'Dinner at safari restaurant'] },
+        { day: 4, title: 'Sentosa Island', activities: ['Sentosa Island full day', 'Beach clubs & water slides', 'USS (Universal Studios Singapore)', 'Island cable car rides'] },
+        { day: 5, title: 'Shopping & Fun', activities: ['Orchard Road shopping (family stores)', 'Ice cream & kid restaurants', 'Marina Bay Sands view', 'Indoor adventure parks'] },
+        { day: 6, title: 'Departure', activities: ['Final breakfast', 'Souvenir shopping', 'Airport transfer', 'Depart Singapore'] }
+      ]
+    },
+    'rajasthan-family': {
+      title: 'Rajasthan Royale Family',
+      badge: 'Rajasthan',
+      days: '9 Days',
+      location: 'Rajasthan, India',
+      description: 'Camel safaris, royal palaces, folk performances, and elephant rides for the whole family. Adventure and culture perfect for family bonding.',
+      tags: ['Heritage', 'Adventure', 'Family'],
+      itinerary: [
+        { day: 1, title: 'Jaipur Arrival', activities: ['Arrive in Jaipur', 'Family hotel check-in', 'City Palace outer exploration', 'Pink City market (colorful & fun)'] },
+        { day: 2, title: 'Palace & Forts', activities: ['Hawa Mahal photo session', 'City Palace tour', 'Albert Hall Museum', 'Traditional Rajasthani dinner'] },
+        { day: 3, title: 'Amber Fort', activities: ['Amber Fort elephant ride', 'Fort exploration & history', 'Scenic views for family photos', 'Local artisan craft workshop'] },
+        { day: 4, title: 'Jodhpur Blue City', activities: ['Drive to Jodhpur', 'Mehrangarh Fort visit', 'Blue city walking tour', 'Local market exploration'] },
+        { day: 5, title: 'Desert Adventure', activities: ['Camel safari in Thar Desert', 'Rajasthani village visit', 'Folk music & dance', 'Desert camping dinner'] },
+        { day: 6, title: 'Udaipur Lakes', activities: ['Drive to Udaipur', 'Lake Pichola boat ride', 'City Palace exploration', 'Sunset viewing'] },
+        { day: 7, title: 'Udaipur Culture', activities: ['Saheliyon ki Bari gardens', 'Crystal Gallery museum', 'Local cooking demonstration', 'Traditional performance'] },
+        { day: 8, title: 'Adventure & Fun', activities: ['Adventure activities (age-appropriate)', 'Water sports at lake', 'Shopping at local bazaars', 'Puppet show'] },
+        { day: 9, title: 'Departure', activities: ['Final palace visit', 'Souvenir shopping', 'Return to Jaipur', 'Depart'] }
+      ]
+    },
+    'tirupati': {
+      title: 'Tirupati Darshan Tour',
+      badge: 'South India',
+      days: '3 Days',
+      location: 'Tirupati, India',
+      description: 'Organized darshan at Sri Venkateswara Temple with comfortable accommodation and guided assistance. Spiritual journey with all logistics handled.',
+      tags: ['Darshan', 'AC Transport', 'Pilgrimage'],
+      itinerary: [
+        { day: 1, title: 'Journey to Tirupati', activities: ['Departure from home city', 'Comfortable AC coach travel', 'Stop for meals & refreshments', 'Hotel check-in in Tirupati'] },
+        { day: 2, title: 'Darshan Day', activities: ['Early morning temple visit', 'Sri Venkateswara Temple darshan', 'Prasadam collection', 'Temple history & guidance', 'Temple gardens walk', 'Evening Aarti'] },
+        { day: 3, title: 'Return Journey', activities: ['Morning temple visit (optional)', 'Last minute purchases at temple shop', 'Breakfast & lunch', 'Return travel to home city', 'Arrival at home'] }
+      ]
+    },
+    'shirdi': {
+      title: 'Shirdi – Nashik Circuit',
+      badge: 'Maharashtra',
+      days: '4 Days',
+      location: 'Shirdi & Nashik, India',
+      description: 'Blessings of Sai Baba at Shirdi with visits to Trimbakeshwar and Pandharpur temples. Comprehensive pilgrimage circuit in a short span.',
+      tags: ['Sacred', 'Group', 'Pilgrimage'],
+      itinerary: [
+        { day: 1, title: 'Journey to Shirdi', activities: ['Depart for Shirdi', 'Comfortable travel arrangements', 'Hotel check-in in Shirdi', 'Evening Aarti at Sai Baba Temple'] },
+        { day: 2, title: 'Shirdi Darshan', activities: ['Morning darshan at Sai Baba Temple', 'Temple museum visit', 'Samadhi Mandir visit', 'Dwarkamai Mosque exploration', 'Evening Aarti ceremony', 'Local market shopping'] },
+        { day: 3, title: 'Nashik Temples', activities: ['Travel to Nashik', 'Trimbakeshwar Temple visit', 'Godavari River ghats', 'Ram Kund bathing ghat', 'Ding Ding Wada visit'] },
+        { day: 4, title: 'Return Journey', activities: ['Morning Nashik temple visit', 'Pandharpur temple visit en route', 'Final darshan', 'Return travel to home city', 'Arrival at home'] }
+      ]
+    },
+    'varanasi': {
+      title: 'Varanasi Kashi Yatra',
+      badge: 'Varanasi',
+      days: '4 Days',
+      location: 'Varanasi, Sarnath, India',
+      description: 'A soulful pilgrimage to Kashi with Kashi Vishwanath darshan, Ganga Aarti, sacred ghats, Sarnath, temple visits, and local cultural experiences.',
+      tags: ['Kashi', 'Ganga Aarti', 'Pilgrimage'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Varanasi', activities: ['Arrive in Varanasi', 'Hotel check-in', 'Evening Ganga Aarti at Dashashwamedh Ghat', 'Walk along the ghats'] },
+        { day: 2, title: 'Kashi Darshan', activities: ['Early morning boat ride on River Ganga', 'Kashi Vishwanath Temple darshan', 'Visit Annapurna Temple and Kal Bhairav Temple', 'Explore local lanes and markets'] },
+        { day: 3, title: 'Sarnath Excursion', activities: ['Visit Sarnath', 'Explore Dhamek Stupa and museum', 'Return to Varanasi', 'Evening temple visits or leisure'] },
+        { day: 4, title: 'Departure', activities: ['Optional morning darshan', 'Breakfast and check-out', 'Souvenir shopping', 'Airport or railway station drop'] }
+      ]
+    },
+    'mahakal-omkar-maheshwar': {
+      title: 'Mahakal, Omkar & Maheshwar Yatra',
+      badge: 'Madhya Pradesh',
+      days: '4 Days',
+      location: 'Ujjain, Omkareshwar, Maheshwar',
+      description: 'A 4-day sacred Madhya Pradesh yatra covering Ujjain Mahakaleshwar Jyotirlinga, Omkareshwar Jyotirlinga, and Maheshwar Palace and ghats. Includes breakfast, 3 star accommodation, private vehicle options, and assistance for Bhasma Aarti tickets at Ujjain.',
+      tags: ['Jyotirlinga', 'Bhasma Aarti', 'Breakfast'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Ujjain', activities: ['Arrive in Ujjain', 'Hotel check-in', 'Visit Mahakaleshwar Jyotirlinga', 'Evening visit to Ram Ghat and local temples'] },
+        { day: 2, title: 'Mahakaleshwar and Ujjain Darshan', activities: ['Early morning Bhasma Aarti assistance subject to availability', 'Visit Kal Bhairav Temple', 'Visit Harsiddhi Temple and Sandipani Ashram', 'Evening leisure in Ujjain'] },
+        { day: 3, title: 'Omkareshwar Jyotirlinga', activities: ['Drive to Omkareshwar', 'Darshan at Omkareshwar Jyotirlinga', 'Narmada riverfront visit', 'Continue to Maheshwar for overnight stay'] },
+        { day: 4, title: 'Maheshwar and Departure', activities: ['Visit Maheshwar Palace and ghats', 'Narmada riverside time', 'Breakfast and check-out', 'Return transfer for departure'] }
+      ]
+    },
+    'char-dham': {
+      title: 'Char Dham Yatra',
+      badge: 'North India',
+      days: '12 Days',
+      location: 'Badrinath, Kedarnath, Gangotri, Yamunotri',
+      description: 'The sacred circuit of Badrinath, Kedarnath, Gangotri, and Yamunotri in the Himalayas. Complete spiritual journey to four holiest Hindu pilgrimage sites.',
+      tags: ['Himalayan', 'Sacred', 'Pilgrimage'],
+      itinerary: [
+        { day: 1, title: 'Journey Begins', activities: ['Depart for Haridwar', 'Arrive at Haridwar', 'Hotel check-in', 'Evening Ganga Aarti at Ghat'] },
+        { day: 2, title: 'Travel to Kedarnath', activities: ['Drive to Chopta/Ukhimath', 'Mountain scenery drive', 'Hotel check-in at base', 'Evening prayers'] },
+        { day: 3, title: 'Kedarnath Darshan', activities: ['Trek to Kedarnath Temple', 'Temple darshan & prayers', 'Sacred Kedarnath visit', 'Return to base camp'] },
+        { day: 4, title: 'Travel to Gangotri', activities: ['Drive to Gangotri region', 'Gangotri Temple visit', 'Gangotri Glacier site (day trip)', 'Hotel check-in'] },
+        { day: 5, title: 'Gangotri Exploration', activities: ['Early morning Aarti', 'Temple prayers', 'Holy dips in Ganga', 'Local market exploration'] },
+        { day: 6, title: 'Travel to Yamunotri', activities: ['Drive to Yamunotri', 'Thermal springs visit', 'Temple check-in', 'Evening prayers'] },
+        { day: 7, title: 'Yamunotri Darshan', activities: ['Trek to temple (if open)', 'Yamunotri Temple visit', 'Hot springs bathing', 'Sacred rituals'] },
+        { day: 8, title: 'Travel to Badrinath', activities: ['Long drive to Badrinath', 'Mountain scenery en route', 'Stops for meals', 'Hotel check-in in Badrinath'] },
+        { day: 9, title: 'Badrinath Darshan', activities: ['Early morning temple visit', 'Badrinath Temple prayers', 'Tapt Kund hot springs', 'Mana Village visit (last village in India)'] },
+        { day: 10, title: 'Badrinath Continued', activities: ['Temple prayers & rituals', 'Neelkant mountain view', 'Saraswati River exploration', 'Evening Aarti'] },
+        { day: 11, title: 'Return Journey', activities: ['Final temple visit', 'Descent from Himalayas', 'Drive towards home city', 'Hotel stop en route'] },
+        { day: 12, title: 'Arrival Home', activities: ['Continue drive', 'Stops for meals & rest', 'Arrive at home city', 'Journey completion with blessings'] }
+      ]
+    },
+    'vaishno-devi': {
+      title: 'Vaishno Devi Yatra',
+      badge: 'Jammu',
+      days: '4 Days',
+      location: 'Katra, Vaishno Devi, Jammu',
+      description: 'A devotional Mata Vaishno Devi pilgrimage with Katra accommodation, transfers, darshan coordination, and time for the holy trek or helicopter option subject to availability.',
+      tags: ['Darshan', 'Sacred', 'Pilgrimage'],
+      itinerary: [
+        { day: 1, title: 'Arrival in Jammu and Transfer to Katra', activities: ['Arrive at Jammu airport or railway station', 'Transfer to Katra', 'Hotel check-in and rest', 'Evening briefing for yatra arrangements'] },
+        { day: 2, title: 'Mata Vaishno Devi Darshan', activities: ['Early start for Vaishno Devi Bhawan', 'Trek or helicopter option subject to availability', 'Mata Vaishno Devi darshan', 'Return to Katra for overnight stay'] },
+        { day: 3, title: 'Katra Leisure and Local Visits', activities: ['Rest after darshan', 'Visit local temples or market', 'Optional Patnitop excursion subject to time', 'Evening leisure in Katra'] },
+        { day: 4, title: 'Departure', activities: ['Breakfast and check-out', 'Transfer to Jammu', 'Last minute shopping if time permits', 'Airport or railway station drop'] }
+      ]
+    }
+  };
+
+  // Open Package Modal
+  function openPackageModal(packageKey) {
+    const pkg = packageData[packageKey];
+    if (!pkg) return;
+
+    document.getElementById('packageModalBadge').textContent = pkg.badge;
+    document.getElementById('packageModalTitle').textContent = pkg.title;
+    document.getElementById('packageModalDays').textContent = pkg.days;
+    document.getElementById('packageModalLocation').textContent = pkg.location;
+    document.getElementById('packageModalDescription').textContent = pkg.description;
+
+    // Build highlights/tags
+    let highlightsHTML = '';
+    pkg.tags.forEach(tag => {
+      highlightsHTML += `<span class="tag">${tag}</span>`;
+    });
+    document.getElementById('packageHighlightsContainer').innerHTML = highlightsHTML;
+
+    const inclusions = getPackageInclusions(packageKey, pkg);
+    const exclusions = getPackageExclusions(packageKey, pkg);
+    document.getElementById('packageInfoContainer').innerHTML = `
+      <div class="package-info-box inclusions">
+        <h4><i class="fas fa-check-circle"></i>Inclusions</h4>
+        <ul>${inclusions.map(item => `<li>${item}</li>`).join('')}</ul>
+      </div>
+      <div class="package-info-box exclusions">
+        <h4><i class="fas fa-info-circle"></i>Exclusions</h4>
+        <ul>${exclusions.map(item => `<li>${item}</li>`).join('')}</ul>
+      </div>
+    `;
+
+    // Build itinerary
+    let itineraryHTML = '<h4 style="font-size:16px; color:var(--navy); font-weight:700; margin-bottom:16px;">Day-by-Day Itinerary</h4>';
+    pkg.itinerary.forEach(day => {
+      itineraryHTML += `
+        <div class="day-block">
+          <h4>Day ${day.day} - ${day.title}</h4>
+          <ul>
+            ${day.activities.map(activity => `<li>${activity}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    });
+    document.getElementById('packageItineraryContainer').innerHTML = itineraryHTML;
+
+    // Show modal
+    document.getElementById('packageModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close Package Modal
+  function closePackageModal() {
+    document.getElementById('packageModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('packageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closePackageModal();
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closePackageModal();
+    }
+  });
+</script>
+</body>
+</html>
